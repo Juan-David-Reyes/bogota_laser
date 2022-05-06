@@ -51,9 +51,35 @@ $(document).ready(function(){
         });
 
     }
+
+    function collapseFooter(){
+
+        if (screen.width <= 768) {
+            
+            const h4 = document.querySelectorAll('footer h4');
+            const ulFooter = document.querySelectorAll('footer .s_footer ul');
+    
+            $(h4).click(function(){
+                if($(this).next().is(':visible')){
+                    $(this).next('ul').slideUp();
+                    $(this).removeClass('rotate_icon');
+                }else{
+                    $(h4).next('ul').slideUp();
+                    $(h4).removeClass('rotate_icon');
+    
+                    $(this).next('ul').slideToggle();
+                    $(this).toggleClass('rotate_icon');
+                }
+            });
+        }
+
+
+
+    }
     
     /* EJECUCION DE FUNCIONES */
 
-    navbarMobileMenu()
+    navbarMobileMenu();
     dropdownMenu();
+    collapseFooter();
 });
