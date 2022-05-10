@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="plugins/swiper_slider/swiper-bundle.min.css">
+    <link rel="stylesheet" href="plugins/modal_video/modal-video.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -211,7 +212,7 @@
                 <div class="c_nuestros_serv">
                     <a href="" class="card_serv">
                         <picture>
-                            <img width="206" height="266" src="https://picsum.photos/200/300" alt="">
+                            <img width="206" height="266" src="images/diseno/01-home/serv1.jpg" alt="">
                         </picture>
                         <div class="txt_serv">
                             <h3>Tratamientos</h3>
@@ -221,7 +222,7 @@
 
                     <a href="" class="card_serv">
                         <picture>
-                            <img width="206" height="266" src="https://picsum.photos/200/300" alt="">
+                            <img width="206" height="266" src="images/diseno/01-home/serv2.jpg" alt="">
                         </picture>
                         <div class="txt_serv">
                             <h3>Consulta valoración oftalmológica</h3>
@@ -231,7 +232,7 @@
 
                     <a href="" class="card_serv">
                         <picture>
-                            <img width="206" height="266" src="https://picsum.photos/200/300" alt="">
+                            <img width="206" height="266" src="images/diseno/01-home/serv3.jpg" alt="">
                         </picture>
                         <div class="txt_serv">
                             <h3>Exámenes diagnósticos</h3>
@@ -241,7 +242,7 @@
 
                     <a href="" class="card_serv">
                         <picture>
-                            <img width="206" height="266" src="https://picsum.photos/200/300" alt="">
+                            <img width="206" height="266" src="images/diseno/01-home/serv4.jpg" alt="">
                         </picture>
                         <div class="txt_serv">
                             <h3>Vision Care and Beauty</h3>
@@ -251,7 +252,7 @@
 
                     <a href="" class="card_serv">
                         <picture>
-                            <img width="206" height="266" src="https://picsum.photos/200/300" alt="">
+                            <img width="206" height="266" src="images/diseno/01-home/serv5.jpg" alt="">
                         </picture>
                         <div class="txt_serv">
                             <h3>Farmacia oftalmológica</h3>
@@ -280,7 +281,7 @@
                 <div class="c_porque_bl">
                     <div class="items_bl">
                         <picture>
-                            <img width="40" height="40" src="" alt="">
+                            <img width="40" height="40" src="images/diseno/01-home/bl1.svg" alt="">
                         </picture>
                         <div class="desc_i_bl">
                             Patentes propias para el tratamiento de la presbicia.
@@ -288,7 +289,7 @@
                     </div>
                     <div class="items_bl">
                         <picture>
-                            <img width="40" height="40" src="" alt="">
+                            <img width="40" height="40" src="images/diseno/01-home/bl2.svg" alt="">
                         </picture>
                         <div class="desc_i_bl">
                             Patentes propias para el tratamiento de la presbicia.
@@ -296,7 +297,7 @@
                     </div>
                     <div class="items_bl">
                         <picture>
-                            <img width="40" height="40" src="" alt="">
+                            <img width="40" height="40" src="images/diseno/01-home/bl3.svg" alt="">
                         </picture>
                         <div class="desc_i_bl">
                             Patentes propias para el tratamiento de la presbicia.
@@ -304,7 +305,7 @@
                     </div>
                     <div class="items_bl">
                         <picture>
-                            <img width="40" height="40" src="" alt="">
+                            <img width="40" height="40" src="images/diseno/01-home/bl4.svg" alt="">
                         </picture>
                         <div class="desc_i_bl">
                             Patentes propias para el tratamiento de la presbicia.
@@ -312,7 +313,7 @@
                     </div>
                 </div>
                 <div class="c_cta w100_line">
-                    <a href="">Conoce más</a>
+                    <a href="" class="btn lightblue">Conoce más</a>
                 </div>
             </div>
         </section>
@@ -324,18 +325,86 @@
                 </h2>
                 <div class="c_testimonios">
 
-                    <div class="card_testimonio">
-                        <picture>
-                            <img src="" alt="">
-                        </picture>
-                        <div class="quotes">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s typesetting industry...
+                    <!-- Swiper -->
+                    <div class="swiper swiperTestimonios">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <picture class="img_testimonio">
+                                    <img width="360" height="192" src="https://picsum.photos/400/300" alt="">
+                                </picture>
+                                <div class="cont_desc_quote">
+                                    <div class="quotes">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s typesetting industry...
+                                    </div>
+                                    <div class="info_cta">
+                                        <div class="name">Maria Fernanda</div>
+                                        <a href="" class="btn leermas">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="video_testimonio js-modal-btn" data-video-id="7TUOI23spt0">
+                                    <img width="360" height="192" src="https://picsum.photos/400/300" alt="">
+                                </picture>
+                                <div class="cont_desc_quote">
+                                    <div class="quotes">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s typesetting industry...
+                                    </div>
+                                    <div class="info_cta">
+                                        <div class="name">Maria Fernanda</div>
+                                        <a href="" class="btn leermas">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="img_testimonio">
+                                    <img width="360" height="192" src="https://picsum.photos/400/300" alt="">
+                                </picture>
+                                <div class="cont_desc_quote">
+                                    <div class="quotes">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s typesetting industry...
+                                    </div>
+                                    <div class="info_cta">
+                                        <div class="name">Maria Fernanda</div>
+                                        <a href="" class="btn leermas">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="img_testimonio">
+                                    <img width="360" height="192" src="https://picsum.photos/400/300" alt="">
+                                </picture>
+                                <div class="cont_desc_quote">
+                                    <div class="quotes">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s typesetting industry...
+                                    </div>
+                                    <div class="info_cta">
+                                        <div class="name">Maria Fernanda</div>
+                                        <a href="" class="btn leermas">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="video_testimonio js-modal-btn" data-video-id="7TUOI23spt0">
+                                    <img width="360" height="192" src="https://picsum.photos/200/300" alt="">
+                                </picture>
+                                <div class="cont_desc_quote">
+                                    <div class="quotes">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s typesetting industry...
+                                    </div>
+                                    <div class="info_cta">
+                                        <div class="name">Maria Fernanda</div>
+                                        <a href="" class="btn leermas">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <div class="info_cta">
-                            <div class="name">Maria Fernanda</div>
-                            <a href="" class="btn_leermas">Leer más</a>
-                        </div>
+  
                     </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
 
                 </div>
             </div>
@@ -346,15 +415,15 @@
                 <div class="c_club_bene">
                     <div class="col">
                         <h2>CLUB DE <br> <span> BENEFICIOS</span></h2>
-                        <picture>
-                            <img src="" alt="">
+                        <picture class="tarjeta_club">
+                            <img width="375" height="208" src="images/diseno/01-home/tarjeta.png" alt="">
                         </picture>
                     </div>
                     <div class="col">
                         <div class="cont_items_bene">
                             <div class="itm_bene">
                                 <picture>
-                                    <img width="50" height="50" src="" alt="">
+                                    <img width="50" height="50" src="images/diseno/01-home/i1.svg" alt="">
                                 </picture>
                                 <div class="txt_itm_bene">
                                     <b> 30% </b> de descuento en gafas de sol
@@ -362,7 +431,7 @@
                             </div>
                             <div class="itm_bene">
                                 <picture>
-                                    <img width="50" height="50" src="" alt="">
+                                    <img width="50" height="50" src="images/diseno/01-home/i2.svg" alt="">
                                 </picture>
                                 <div class="txt_itm_bene">
                                     <b> 30% </b> de descuento en gafas de sol
@@ -370,7 +439,7 @@
                             </div>
                             <div class="itm_bene">
                                 <picture>
-                                    <img width="50" height="50" src="" alt="">
+                                    <img width="50" height="50" src="images/diseno/01-home/i3.svg" alt="">
                                 </picture>
                                 <div class="txt_itm_bene">
                                     <b> 30% </b> de descuento en gafas de sol
@@ -390,34 +459,110 @@
                 <div class="c_blog">
                     <div class="col_title">
                         <picture class="dark_border">
-                            <img width="40" height="40" src="" alt="">
+                            <img width="40" height="40" src="images/diseno/01-home/i_blog.svg" alt="">
                         </picture>
+                        <h2>CONTENIDO HECHO PARA TI</h2>
                         <div class="c_cta al_center">
                             <a href="" class="btn lightblue">Ver todo</a>
                         </div>
                     </div>
                     <div class="col_slider_notas">
 
-                        <div class="card_nota">
-                            <picture>
-                                <img width="360" height="221" src="" alt="">
-                            </picture>
-                            <div class="card_info_nota">
-                                <div class="categoria">
-                                    Nombre categoría
+                        <!-- Swiper -->
+                        <div class="swiper sliderBlog">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="img_nota" href="">
+                                        <img width="360" height="221" src="https://picsum.photos/400/300" alt="">
+                                    </a href="">
+                                    <div class="container_info">
+                                        <div class="card_info_nota">
+                                            <div class="categoria">
+                                                Nombre categoría
+                                            </div>
+                                            <div class="fecha">
+                                                04 mar 2022
+                                            </div>
+                                        </div>
+                                        <h5 class="title_nota">
+                                            It is a long established fact that a reader will be distracted
+                                        </h5>
+                                        <div class="c_cta al_right">
+                                            <a href="" class="btn leermas">Ver más</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="fecha">
-                                    04 mar 2022
+                                <div class="swiper-slide">
+                                    <a class="img_nota" href="">
+                                        <img width="360" height="221" src="https://picsum.photos/400/300" alt="">
+                                    </a href="">
+                                    <div class="container_info">
+                                        <div class="card_info_nota">
+                                            <div class="categoria">
+                                                Nombre categoría
+                                            </div>
+                                            <div class="fecha">
+                                                04 mar 2022
+                                            </div>
+                                        </div>
+                                        <h5 class="title_nota">
+                                            It is a long established fact that a reader will be distracted
+                                        </h5>
+                                        <div class="c_cta al_right">
+                                            <a href="" class="btn leermas">Ver más</a>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <a class="img_nota" href="">
+                                        <img width="360" height="221" src="https://picsum.photos/400/300" alt="">
+                                    </a href="">
+                                    <div class="container_info">
+                                        <div class="card_info_nota">
+                                            <div class="categoria">
+                                                Nombre categoría
+                                            </div>
+                                            <div class="fecha">
+                                                04 mar 2022
+                                            </div>
+                                        </div>
+                                        <h5 class="title_nota">
+                                            It is a long established fact that a reader will be distracted
+                                        </h5>
+                                        <div class="c_cta al_right">
+                                            <a href="" class="btn leermas">Ver más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="img_nota" href="">
+                                        <img width="360" height="221" src="https://picsum.photos/400/300" alt="">
+                                    </a href="">
+                                    <div class="container_info">
+                                        <div class="card_info_nota">
+                                            <div class="categoria">
+                                                Nombre categoría
+                                            </div>
+                                            <div class="fecha">
+                                                04 mar 2022
+                                            </div>
+                                        </div>
+                                        <h5 class="title_nota">
+                                            It is a long established fact that a reader will be distracted
+                                        </h5>
+                                        <div class="c_cta al_right">
+                                            <a href="" class="btn leermas">Ver más</a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <h5 class="title_nota">
-                                It is a long established fact that a reader will be distracted
-                            </h5>
-                            <div class="c_cta">
-                                <a href="" class="btn leermas">Ver más</a>
-                            </div>
+
                         </div>
 
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        
                     </div>
                 </div>
             </div>
@@ -431,6 +576,8 @@
         <!-- SCRIPTS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="/plugins/swiper_slider/swiper-bundle.min.js"></script>
+        <script src="/plugins/modal_video/jquery-modal-video.min.js"></script>
+        <script src="/plugins/modal_video/modal-video.min.js"></script>
         <script src="/js/main.js"></script>
         <!-- ************** -->
 
