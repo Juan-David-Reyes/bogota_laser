@@ -1,6 +1,4 @@
 $(document).ready(function(){
-
-    $(".js-modal-btn").modalVideo();
     
     function dropdownMenu(){
 
