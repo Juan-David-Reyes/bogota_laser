@@ -76,10 +76,23 @@ $(document).ready(function(){
 
 
     }
+
+    function sliderHomeHero(){
+        let swiper = new Swiper(".sliderHero", {
+            pagination: {
+              el: ".sliderHero .swiper-pagination",
+              clickable: true,
+              type: 'bullets',
+            },
+          });
+    }
     
     /* EJECUCION DE FUNCIONES */
 
     navbarMobileMenu();
     dropdownMenu();
+
+    sliderHomeHero();
+
     collapseFooter();
 });
