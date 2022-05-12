@@ -84,17 +84,36 @@ $(document).ready(function(){
               clickable: true,
               type: 'bullets',
             },
+            parallax: true,
+            lazy: true,
           });
     }
 
     function sliderBlogSection(){
         let swiper = new Swiper(".col_slider_notas .sliderBlog", {
-            slidesPerView:2,
+            slidesPerView:1,
             spaceBetween: 20,
             navigation: {
                 nextEl: ".col_slider_notas .swiper-button-next",
                 prevEl: ".col_slider_notas .swiper-button-prev",
             },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10
+                },
+                // when window width is >= 480px
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 10
+                },
+                // when window width is >= 640px
+                1050: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                }
+              }
         });
     }
 

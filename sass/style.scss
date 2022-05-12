@@ -764,6 +764,7 @@ footer{
     align-items: center;
     height: 100%;
     padding: 0 0 0 180px;
+    box-sizing: border-box;
     picture{
         height: 100%;
         display: inline-block;
@@ -785,6 +786,7 @@ footer{
         line-height: 1;
         margin: 0 0 20px;
         span{
+            font-size: 4rem;
             color: var(--txt_cta_lightblue);
         }
     }
@@ -792,6 +794,10 @@ footer{
         font-size: 20px;
         line-height: 1.3;
         margin-bottom: 20px;
+        span{
+            font-size: 20px;
+            color: var(--txt_cta_lightblue);
+        }
     }
 }
 
@@ -869,8 +875,10 @@ footer{
     box-sizing: border-box;
 }
 .c_blog{
-    display: grid;
-    grid-template-columns: minmax(320px, 1fr) 1fr;
+    display: flex;
+
+/*     display: grid;
+    grid-template-columns: minmax(320px, 1fr) 1fr; */
     gap: 20px;
     align-items: stretch;
     .col_title{
@@ -884,6 +892,8 @@ footer{
         padding: 20px;
         box-sizing: border-box;
         position: relative;
+        max-width: 300px;
+        width: 100%;
         &::before{
             content: '';
             position: absolute;
@@ -926,6 +936,12 @@ footer{
         padding: 0 40px;
         box-sizing: border-box;
         position: relative;
+        .swiper-button-next{
+            right: 20px;
+        }
+        .swiper-button-prev{
+            left: 20px;
+        }
         .swiper-slide{
             width: 100%;
             flex-direction: column;
@@ -973,7 +989,10 @@ footer{
             }
         }
     }
+}
 
+.col_slider_notas{
+    width: 70%;
 }
 
 .s_club_beneficios{
@@ -1009,6 +1028,7 @@ footer{
             font-size: 60px;
             margin: 0 0 20px;
             span{
+                font-size: 60px;
                 color: var(--color_pri);
             }
         }
@@ -1608,6 +1628,7 @@ button[type=submit]{
     display: none;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     span{
         font-size: 24px;
     }
@@ -1717,6 +1738,34 @@ RESPONSIVE DESIGN
     .cont_tab_sec .c_img_equipos{
         grid-template-columns: 1fr;
     }
+    .c_blog{
+        flex-direction: column;
+    }
+    .c_blog .col_title{
+        max-width: initial;
+    }
+    .c_blog .col_title::before{
+        display: none;
+    }
+    .c_blog .col_title h2{
+        margin: 20px 0 0;
+    }
+    .col_slider_notas{
+        width: 100%;
+        max-width: initial!important;
+    }
+    .sliderHero .cont_gen_slider{
+        padding: 20px;
+    }
+    .sliderHero .cont_gen_slider{
+        grid-template-columns: 1fr 1fr;
+    }
+    .s_club_beneficios .c_club_bene h2{
+        font-size: 40px;
+        span{
+            font-size: 40px;
+        }
+    }
 }
 @media screen and (max-width:768px){
     .tit_section{
@@ -1727,6 +1776,16 @@ RESPONSIVE DESIGN
     }
     header .logo_header a img{
         width: 160px;
+    }
+    .sliderHero .cont_gen_slider{
+        grid-template-columns: 1fr;
+    }
+    .c_txt_slider{
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     footer h4{
         padding: 4px 0;
@@ -1831,7 +1890,66 @@ RESPONSIVE DESIGN
     .swiper-button-next:after, .swiper-button-prev:after{
         font-size: 16px;
     }
-
+    .s_hero{
+        height: initial;
+        padding: 0 0 40px;
+        position: relative;
+    }
+    .swiper.sliderHero{
+        position: initial;
+    }
+    .sliderHero .cont_gen_slider{
+        padding: 0 20px;
+    }
+    .sliderHero .cont_gen_slider picture{
+        max-height: 230px;
+    }
+    .c_txt_slider h2{
+        font-size: 2.6rem;
+        span{
+            font-size: 2.6rem;
+        }
+    }
+    .s_club_beneficios .c_club_bene{
+        grid-template-columns: 1fr;
+        h2{
+            text-align: center;
+        }
+    }
+    .s_club_beneficios{
+        min-height: 530px;
+    }
+    .s_club_beneficios .tarjeta_club{
+        bottom: -70%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        img{
+            display: block;
+            margin: auto;
+        }
+    }
+    .cont_items_bene{
+        gap: 20px;
+    }
+    .s_texture::before, .s_texture:after{
+        display: none;
+    }
+    .s_texture:after{
+        background-size: contain;
+    }
+    .s_club_beneficios::before{
+        display: none;
+    }
+    .tit_section.s2::after{
+        display: none;
+    }
+    .tit_section.s2::before, .tit_section.s2::after{
+        display: none;
+    }
+    .w100_line::before, .w100_line::after{
+        display: none;
+    }
 }
 @media screen and (max-width:480px){
     header .header_nav{
@@ -1848,5 +1966,64 @@ RESPONSIVE DESIGN
     }
     .txt_item_s{
         font-size: 14px;
+    }
+    .cont_items_bene{
+        grid-template-columns: 1fr;
+    }
+    .cont_items_bene .itm_bene{
+        flex-direction: row;
+    }
+    .cont_items_bene .itm_bene picture{
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+    }
+    .c_nuestros_serv{
+        grid-template-columns: 1fr 1fr;
+    }
+    .card_serv{
+        min-width: initial;
+        min-height: 200px;
+    }
+    .c_porque_bl .items_bl{
+        flex-direction: row;
+        gap: 10px;
+    }
+    .c_porque_bl .items_bl{
+        text-align: left;
+    }
+    .s_club_beneficios {
+        min-height: 640px;
+    }
+    .s_club_beneficios .tarjeta_club{
+        bottom: -50%;
+    }
+    .s_club_beneficios .tarjeta_club img{
+        width: 100%;
+        height: 100%;
+    }
+    .c_porque_bl .items_bl picture{
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+    .c_porque_bl{
+        justify-items: flex-start;
+    }
+    .c_txt_slider h2{
+        text-align: center;
+    }
+    .c_txt_slider .txt_desc_slider{
+        text-align: center;
+        font-size: 16px;
+        span{
+            font-size: 16px;
+        }
+    }
+    .c_valoracion .cont_vsc h5{
+        text-align: center;
+    }
+    .cont_items_bene .itm_bene{
+        text-align: left;
     }
 }
