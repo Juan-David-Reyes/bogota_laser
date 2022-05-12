@@ -98,10 +98,25 @@ $(document).ready(function(){
         });
     }
 
+    function sliderItems(){
+        let swiper = new Swiper(".c_items_slider .swiperItems", {
+            slidesPerView:5,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".c_items_slider .swiper-button-next",
+                prevEl: ".c_items_slider .swiper-button-prev",
+            },
+        });
+    }
+
     function sliderTestimonios(){
         var swiper = new Swiper(".swiperTestimonios", {
             slidesPerView:3,
             spaceBetween: 20,
+            pagination: {
+                el: '.c_testimonios .swiper-pagination',
+                type: 'bullets',
+              },
             navigation: {
                 nextEl: ".c_testimonios .swiper-button-next",
                 prevEl: ".c_testimonios .swiper-button-prev",
@@ -128,6 +143,7 @@ $(document).ready(function(){
 
     sliderHomeHero();
     sliderBlogSection();
+    sliderItems();
     sliderTestimonios();
 
     collapseFooter();

@@ -32,6 +32,7 @@ html{
 }
 *{
     -webkit-font-smoothing: antialiased;
+    font-size: 16px;
 }
 a{
     text-decoration: none;
@@ -40,6 +41,9 @@ a{
 h1, h2, h3, h4, h5, h6{
     font-weight: 700;
     color: #033448;
+}
+h1{
+    text-transform: uppercase;
 }
 .tit_section{
     font-size: 2rem;
@@ -87,7 +91,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .center{
     width: 100%;
-    max-width: 1120px;
+    max-width: 1100px;
     margin: 0 auto;
     display: block;
     padding: 0 20px;
@@ -228,6 +232,42 @@ h1, h2, h3, h4, h5, h6{
 }
 .al_right{
     justify-content: flex-end;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-pagination-bullet{
+    transition: 300ms ease;
+}
+.swiper-pagination-bullet-active{
+    background: var(--color_pri);
+    width: 10px;
+    height: 10px;
+}
+
+
+.miga{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 0;
+    box-sizing: border-box;
+    gap: 8px;
+    .link_miga{
+        text-decoration: none;
+        color: #878787;
+        font-size: 13px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    span{
+        color: #878787;
+        font-size: 13px;
+    }
 }
 
 
@@ -1231,16 +1271,93 @@ footer{
     }
 }
 
-
-
-
 /* ****** */
+/* INTERNA QUIENES SOMOS */
+
+.s_header_int{
+    width: 100%;
+    position: relative;
+    max-height: 530px;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    picture{
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: right;
+        }
+    }
+    > .center{
+        position: relative;
+        z-index: 1;
+        height: 100%;
+    }
+}
+.c_headet_int{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 70%;
+}
+.s_items_slider{
+    padding: 60px 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.c_items_slider{
+    position: relative;
+    padding: 0 70px;
+    box-sizing: border-box;
+}
+.swiperItems{
+    .swiper-slide{
+        flex-direction: column;
+        gap: 20px;
+        picture{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            border: 1px solid var(--color_pri);
+            padding: 8px;
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+            span{
+                color: var(--txt_cta_lightblue);
+            }
+        }
+    }
+}
+
+.operarse_bl{
+    padding: 60px 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #F4F4F4;
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+/* ************
+RESPONSIVE DESIGN
+************ */
 
 
 
