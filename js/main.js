@@ -100,19 +100,36 @@ $(document).ready(function(){
 
     function sliderItems(){
         let swiper = new Swiper(".c_items_slider .swiperItems", {
-            slidesPerView:5,
-            spaceBetween: 20,
+            slidesPerView:1,
+            spaceBetween: 0,
             navigation: {
                 nextEl: ".c_items_slider .swiper-button-next",
                 prevEl: ".c_items_slider .swiper-button-prev",
             },
+            breakpoints: {
+                // when window width is >= 320px
+                370: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                // when window width is >= 480px
+                600: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                },
+                // when window width is >= 640px
+                900: {
+                  slidesPerView: 5,
+                  spaceBetween: 30
+                }
+              }
         });
     }
 
     function sliderTestimonios(){
         var swiper = new Swiper(".swiperTestimonios", {
-            slidesPerView:3,
-            spaceBetween: 20,
+            slidesPerView:1,
+            spaceBetween: 10,
             pagination: {
                 el: '.c_testimonios .swiper-pagination',
                 type: 'bullets',
@@ -121,6 +138,23 @@ $(document).ready(function(){
                 nextEl: ".c_testimonios .swiper-button-next",
                 prevEl: ".c_testimonios .swiper-button-prev",
             },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10
+                },
+                // when window width is >= 480px
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 10
+                },
+                // when window width is >= 640px
+                900: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                }
+              }
         });
     }
 

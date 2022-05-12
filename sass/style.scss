@@ -1282,6 +1282,7 @@ footer{
 /* ****** */
 /* INTERNA QUIENES SOMOS */
 
+
 .s_header_int{
     width: 100%;
     position: relative;
@@ -1312,6 +1313,12 @@ footer{
     grid-template-columns: 1fr 1fr;
     align-items: center;
     height: 70%;
+}
+.head_desc_int{
+    background: #ffffffcc;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .s_items_slider{
     padding: 60px 0;
@@ -1435,6 +1442,7 @@ button[type=submit]{
    height: 100%;
    cursor: pointer;
    font-weight: 700;
+   min-width: 130px;
 }
 
 .navtabs_pri{
@@ -1504,6 +1512,7 @@ button[type=submit]{
     display: grid;
     grid-template-columns: minmax(200px , 285px) 1fr;
     margin: 40px 0 0;
+    position: relative;
     .navtab_sec{
         margin: 20px 0 0;
         ul{
@@ -1592,8 +1601,14 @@ button[type=submit]{
         }
     }
 }
-
-
+.mMobile_tab_sec{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    span{
+        font-size: 24px;
+    }
+}
 
 
 
@@ -1690,6 +1705,12 @@ RESPONSIVE DESIGN
     .idiomasMobile{
         display: flex!important;
     }
+    .c_headet_int{
+        grid-template-columns: 2fr 1fr;
+    }
+    .cont_tab_sec .c_img_equipos{
+        grid-template-columns: 1fr;
+    }
 }
 @media screen and (max-width:768px){
     header .logo_header a img{
@@ -1732,6 +1753,37 @@ RESPONSIVE DESIGN
         border: 0;
         padding: 0;
     }
+    .c_headet_int{
+        grid-template-columns: 2fr 1fr;
+    }
+    .c_headet_int{
+        grid-template-columns: 1fr;
+    }
+    .form_col{
+        flex-direction: column;
+    }
+    .menu_tab_sec{
+        position: absolute;
+        top:55px;
+        left: 0;
+        background-color: #FFF;
+        padding: 20px!important;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 8px;
+        z-index: 1;
+        transform: translateX(-100vw);
+        &.active{
+            transform: translateX(0vw);
+        }
+    }
+    .mMobile_tab_sec{
+        display: flex;
+    }
+    .cont_tab_pri{
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+    }
 }
 @media screen and (max-width:480px){
     header .header_nav{
@@ -1739,5 +1791,11 @@ RESPONSIVE DESIGN
     }
     .s_404{
         padding: 0 0 50px;
+    }
+    .navtabs_pri ul li a{
+        font-size: 13px;
+    }
+    .navtabs_pri ul{
+        gap: 8px;
     }
 }
