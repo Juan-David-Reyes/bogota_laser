@@ -183,6 +183,7 @@ h1 {
   font-size: 16px;
   font-weight: 700;
   padding: 4px 12px;
+  max-width: 70px;
 }
 .btn.link {
   background-color: transparent;
@@ -217,6 +218,10 @@ h1 {
 .btn:hover::before {
   width: 160px;
   opacity: 1;
+}
+
+.grey_bg {
+  background-color: #E5E5E5;
 }
 
 .swiper {
@@ -461,6 +466,7 @@ header .header_nav .navbar ul li .cont_search .search {
   justify-content: center;
   font-size: 16px;
   cursor: pointer;
+  min-width: initial;
 }
 header .header_nav .navbar ul .search-icon span {
   display: flex;
@@ -2050,6 +2056,14 @@ RESPONSIVE DESIGN
 
   .w100_line::before, .w100_line::after {
     display: none;
+  }
+
+  .btn.cta_reserva_cita {
+    transform: rotate(270deg);
+    max-width: initial;
+    padding: 8px 12px;
+    right: -54px;
+    border-radius: 8px 8px 0 0;
   }
 }
 @media screen and (max-width: 480px) {

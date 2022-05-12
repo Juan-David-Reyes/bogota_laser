@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+    function colorMain(){
+
+        const s_medios_pago = null ;
+        
+        if($('')){
+
+        }
+    }
     
     function dropdownMenu(){
 
@@ -146,7 +155,7 @@ $(document).ready(function(){
     }
 
     function sliderTestimonios(){
-        var swiper = new Swiper(".swiperTestimonios", {
+        let swiper = new Swiper(".swiperTestimonios", {
             slidesPerView:1,
             spaceBetween: 10,
             pagination: {
@@ -174,6 +183,18 @@ $(document).ready(function(){
                   spaceBetween: 20
                 }
               }
+        });
+    }
+
+    function sliderEquipoMedico(){
+        let swiper = new Swiper(".slider_equipo_med .swiperEquipoMed", {
+            slidesPerView:3,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".slider_equipo_med .swiper-button-next",
+                prevEl: ".slider_equipo_med .swiper-button-prev",
+            },
+            
         });
     }
 
@@ -219,6 +240,7 @@ $(document).ready(function(){
     navbarMobileMenu();
     dropdownMenu();
     searchBtn();
+    colorMain();
 
     sliderHomeHero();
     sliderBlogSection();
@@ -226,6 +248,7 @@ $(document).ready(function(){
     sliderTestimonios();
     sectionOperarseBL();
     mMobileOperarseBL();
+    sliderEquipoMedico();
 
     collapseFooter();
 });
