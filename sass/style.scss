@@ -116,10 +116,10 @@ h1{
     font-weight: 700;
 }
 .swiper-button-next{
-    right: 20px;
+    right: 0px;
 }
 .swiper-button-prev{
-    left: 20px;
+    left: 0px;
 }
 .c_cta{
     display: flex;
@@ -1058,7 +1058,7 @@ footer{
 
 .c_testimonios{
     position: relative;
-    padding: 0 40px;
+    padding: 0 20px;
     box-sizing: border-box;
     .swiper-slide{
         flex-direction: column;
@@ -1620,6 +1620,9 @@ RESPONSIVE DESIGN
 
 
 @media screen and (max-width:1050px){
+    *{
+        font-size: 15px;
+    }
     .spacer{
         height: 70px;
     }
@@ -1713,6 +1716,12 @@ RESPONSIVE DESIGN
     }
 }
 @media screen and (max-width:768px){
+    .tit_section{
+        font-size: 1.6em;
+        &.c_lightblue{
+            font-size: 24px;
+        }
+    }
     header .logo_header a img{
         width: 160px;
     }
@@ -1765,14 +1774,15 @@ RESPONSIVE DESIGN
     .menu_tab_sec{
         position: absolute;
         top:55px;
-        left: 0;
+        left: -21px;
         background-color: #FFF;
         padding: 20px!important;
         box-sizing: border-box;
-        width: 100%;
-        border-radius: 8px;
+        border-radius: 0 8px 8px 0;
         z-index: 1;
         transform: translateX(-100vw);
+        border: 1px solid #D2D2D2;
+        transition: 300ms ease-out;
         &.active{
             transform: translateX(0vw);
         }
@@ -1784,6 +1794,41 @@ RESPONSIVE DESIGN
         grid-template-columns: 30px 1fr;
         gap: 10px;
     }
+    .cont_tab_pri .navtab_sec ul li .link_tab_sec{
+        border-radius: 6px;
+    }
+    .s_header_int picture img{
+        object-fit: cover;
+        object-position: center;
+    }
+    .s_header_int{
+        max-height: initial;
+        height: initial;
+        flex-direction: column;
+    }
+    .s_header_int picture{
+        max-height: 160px;
+        position: relative;
+        overflow: hidden;
+        img{
+            max-height: 160px;
+        }
+    }
+    .head_desc_int{
+        padding: 0;
+        background-color: transparent;
+    }
+    .c_items_slider{
+        padding: 0 30px;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        width: 30px;
+        height: 30px;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 16px;
+    }
+
 }
 @media screen and (max-width:480px){
     header .header_nav{
@@ -1797,5 +1842,8 @@ RESPONSIVE DESIGN
     }
     .navtabs_pri ul{
         gap: 8px;
+    }
+    .txt_item_s{
+        font-size: 14px;
     }
 }

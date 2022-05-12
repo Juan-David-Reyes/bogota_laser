@@ -183,6 +183,16 @@ $(document).ready(function(){
         });
     }
 
+    function mMobileOperarseBL(){
+        const btnMenuOperarseBL = document.querySelector('.mMobile_tab_sec');
+        const MenuOperarseBL = document.querySelector('.menu_tab_sec');
+
+        $(btnMenuOperarseBL).click(function(){
+            $(MenuOperarseBL).toggleClass('active')
+        })
+
+    }
+
 
     
     /* EJECUCION DE FUNCIONES */
@@ -195,7 +205,8 @@ $(document).ready(function(){
     sliderBlogSection();
     sliderItems();
     sliderTestimonios();
-    sectionOperarseBL()
+    sectionOperarseBL();
+    mMobileOperarseBL();
 
     collapseFooter();
 });
