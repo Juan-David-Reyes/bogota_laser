@@ -133,7 +133,23 @@ $(document).ready(function(){
         });
        
     }
-    
+
+    function sectionOperarseBL(){
+
+        const linkTabPri = document.querySelectorAll('.link_tab');
+        const linkTabSec = document.querySelectorAll('.link_tab_sec');
+
+        $(linkTabPri).click(function(){
+            $(linkTabPri).removeClass('active')
+            $(this).toggleClass('active')
+        });
+        $(linkTabSec).click(function(){
+            $(linkTabSec).removeClass('active')
+            $(this).toggleClass('active')
+        });
+    }
+
+
     
     /* EJECUCION DE FUNCIONES */
 
@@ -145,6 +161,7 @@ $(document).ready(function(){
     sliderBlogSection();
     sliderItems();
     sliderTestimonios();
+    sectionOperarseBL()
 
     collapseFooter();
 });
