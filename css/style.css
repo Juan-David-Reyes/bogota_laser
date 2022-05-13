@@ -1690,12 +1690,14 @@ button[type=submit] {
 .cont_search_mobile {
   display: none;
   width: 100%;
+  padding: 14px 0 0;
   grid-column: 1/3;
-  display: grid;
-  grid-template-columns: 60px 1fr;
+}
+.cont_search_mobile .sub_contain {
   align-items: center;
   justify-content: center;
-  padding: 14px 0 0;
+  grid-template-columns: 60px 1fr;
+  display: grid;
 }
 .cont_search_mobile input {
   height: 36px;
