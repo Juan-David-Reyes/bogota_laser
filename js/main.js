@@ -69,6 +69,7 @@ $(document).ready(function(){
             const ulFooter = document.querySelectorAll('footer .s_footer ul');
     
             $(h4).click(function(){
+
                 if($(this).next().is(':visible')){
                     $(this).next('ul').slideUp();
                     $(this).removeClass('rotate_icon');
@@ -200,11 +201,31 @@ $(document).ready(function(){
 
     function searchBtn(){
 
+        const btnSerachMobile = document.getElementById('btnSerachMobile');
+
         const inputSearch = document.querySelector('.search-icon .cont_search');
+        const inputSearchMobile = document.querySelector('.cont_search_mobile');
+
+
+        /* DESKTOP */
 
         $('.search-icon .fa-search').click(function(){
             $(inputSearch).toggleClass('active');
         });
+
+        /* MOBILE */
+
+        /* $(window).scroll(function() {
+            if($(inputSearchMobile).is(':visible')){
+                $(inputSearchMobile).slideUp();
+            }
+        }); */
+
+        $(btnSerachMobile).click(function(){
+            $(inputSearchMobile).slideToggle();
+        });
+
+
        
     }
 
