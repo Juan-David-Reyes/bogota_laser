@@ -183,18 +183,63 @@ $(document).ready(function(){
                   slidesPerView: 3,
                   spaceBetween: 20
                 }
-              }
+            }
         });
     }
 
     function sliderEquipoMedico(){
         let swiper = new Swiper(".slider_equipo_med .swiperEquipoMed", {
-            slidesPerView:3,
-            spaceBetween: 10,
+            slidesPerView:1,
+            spaceBetween: 0,
             navigation: {
                 nextEl: ".slider_equipo_med .swiper-button-next",
                 prevEl: ".slider_equipo_med .swiper-button-prev",
             },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 0
+                },
+                // when window width is >= 480px
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                // when window width is >= 640px
+                900: {
+                  slidesPerView: 3,
+                  spaceBetween: 30
+                }
+            }
+            
+        });
+    }
+    function sliderNuestroEquipo(){
+        let swiper = new Swiper(".swiperEquipo", {
+            slidesPerView:1,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: ".slider_n_equipo .swiper-button-next",
+                prevEl: ".slider_n_equipo .swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 0
+                },
+                // when window width is >= 480px
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                // when window width is >= 640px
+                900: {
+                  slidesPerView: 3,
+                  spaceBetween: 30
+                }
+            }
             
         });
     }
@@ -270,6 +315,7 @@ $(document).ready(function(){
     sectionOperarseBL();
     mMobileOperarseBL();
     sliderEquipoMedico();
+    sliderNuestroEquipo()
 
     collapseFooter();
 });
