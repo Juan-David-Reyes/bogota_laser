@@ -1822,6 +1822,9 @@ button[type=submit] {
   margin: 20px 0 0;
   justify-content: center;
 }
+.slider_equipo_med .swiper-button-next, .slider_equipo_med .swiper-button-prev {
+  top: 50%;
+}
 
 .s_nuestro_equipo {
   padding: 60px 0 0;
