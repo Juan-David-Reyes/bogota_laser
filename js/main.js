@@ -325,6 +325,27 @@ $(document).ready(function(){
 
     }
 
+    function preguntasFrecuentes(){
+
+        const pregunta = document.querySelectorAll('.c_tit_pregunta')
+        const respuesta = document.querySelectorAll('.item_respuesta_f')
+
+        $(pregunta).click(function(){
+
+            
+            if($(this).hasClass('active')){
+                $(this).next(respuesta).slideUp();
+                $(this).removeClass('active');
+            }else{
+                $(respuesta).slideUp();
+                $(pregunta).removeClass('active');
+                $(this).toggleClass('active');
+                $(this).next(respuesta).slideToggle();
+            }
+
+        });
+    }
+
 
     function ajusteFooter(){
 
@@ -353,6 +374,7 @@ $(document).ready(function(){
     sliderEquipoMedico();
     sliderNuestroEquipo()
     sliderVideos();
+    preguntasFrecuentes()
 
     collapseFooter();
     ajusteFooter();

@@ -73,6 +73,13 @@
         CONOCER OTROS PROFESIONALES
     </h2>
 ```
+
+```HTML
+    <h2 class="tit_section c_white">
+        CONOCER OTROS <span> PROFESIONALES </span>
+    </h2>
+```
+
 ```HTML
     <h2 class="tit_section c_lightblue">
         CONOCER OTROS PROFESIONALES

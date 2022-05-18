@@ -83,6 +83,16 @@ h1 {
   font-size: 30px;
   margin: 0 0 20px;
 }
+.tit_section.c_white {
+  color: var(--txt_cta_light);
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0 0 20px;
+}
+.tit_section.c_white span {
+  font-size: 30px;
+  color: var(--txt_cta_lightblue);
+}
 
 .s_texture {
   position: relative;
@@ -2158,6 +2168,115 @@ button[type=submit] {
 }
 .c_sliderVideos .swiper-button-next, .c_sliderVideos .swiper-button-prev {
   top: 45%;
+}
+
+/* ESTILOS INTERNA CLUB DE BENEFICIOS */
+.s_header_club_bene {
+  background: linear-gradient(0deg, rgba(2, 31, 44, 0.92), rgba(2, 31, 44, 0.92)), linear-gradient(0deg, #021F2C, #021F2C), url(../images/diseno/01-home/img_hero_bg.png) no-repeat center;
+  background-blend-mode: normal, color, normal;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  min-height: 340px;
+}
+.s_header_club_bene .miga .link_miga {
+  color: var(--txt_cta_light);
+}
+
+.c_header_club_bene {
+  box-sizing: border-box;
+  padding: 30px 0 0;
+  margin: 0 0 120px;
+}
+.c_header_club_bene picture {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  transform: translateY(60px);
+  max-width: 375px;
+}
+.c_header_club_bene picture img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.c_header_club_bene .tit_section {
+  font-size: 50px;
+}
+.c_header_club_bene .tit_section span {
+  font-size: 50px;
+}
+
+.c_cards_club_bene .c_header2 .tit_section {
+  font-size: 20px;
+  text-transform: none;
+  color: var(--txt_cta_lightblue);
+}
+
+/* ESTILOS PREGUNTAS FRECUENTES */
+.s_preguntas_f {
+  background-color: #F4F4F4;
+}
+
+.c_preguntas_f {
+  padding: 20px 0 0;
+}
+
+.grand_container_preguntas {
+  display: grid;
+  grid-template-columns: minmax(265px, 300px) 1fr;
+  padding: 20px 0 0;
+  box-sizing: border-box;
+}
+.grand_container_preguntas .container_preguntas_f {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.grand_container_preguntas .container_preguntas_f .item_pregunta_f {
+  background: var(--bg_general);
+  border-radius: 4px;
+}
+
+.c_tit_pregunta {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 14px;
+  gap: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.c_tit_pregunta div {
+  transition: 300ms ease;
+  font-weight: 700;
+}
+.c_tit_pregunta span {
+  background-color: var(--txt_cuerpo);
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--txt_cta_light);
+  transform: rotate(45deg);
+  transition: 300ms ease;
+  font-size: 12px;
+}
+.c_tit_pregunta.active {
+  color: var(--txt_cta_lightblue);
+}
+.c_tit_pregunta.active span {
+  background-color: var(--bg_cta_lightblue);
+  transform: rotate(0deg);
+}
+
+.item_respuesta_f {
+  display: none;
 }
 
 /* ************
