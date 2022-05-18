@@ -152,6 +152,17 @@ h1{
     font-size: 18px;
     position: relative;
     overflow: hidden;
+    &.social1{
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--txt_cta_light);
+        background-color: var(--txt_cta_lightblue);
+        height: 40px;
+        width: 40px;
+        padding: 0;
+    }
     &.cta_reserva_cita{
         position: fixed;
         right: 0;
@@ -1736,7 +1747,7 @@ button[type=submit]{
 }   
 .slider_equipo_med{
     position: relative;
-    padding: 0 60px;
+    padding: 0px;
     box-sizing: border-box;
     .swiper-slide{
         display: grid;
@@ -1779,6 +1790,12 @@ button[type=submit]{
 
     .swiper-button-next, .swiper-button-prev{
         top: 50%;
+    }
+    .swiper-button-next{
+        right: -60px;
+    }
+    .swiper-button-prev{
+        left: -60px;
     }
 }
 
@@ -1831,12 +1848,126 @@ button[type=submit]{
     }
 }
 
+/* DISEÑO INTERNA NUESTROS PROFESIONALES INTERNA */
+
+.s_perfil_pro{
+    display: block;
+    background-color: #F4F4F4;
+}
+.c_perfil_pro{
+    padding: 80px 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(200px, 264px) 1fr;
+    gap:20px;
+    align-items: flex-start;
+    max-width: 930px;
+    margin: 0 auto;
+    aside{
+        background: var(--bg_general);
+        padding: 30px 20px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        text-align: center;
+        height: max-content;
+        position: sticky;
+        top: 160px;
+        h4{
+            text-transform: uppercase;
+            color: var(--txt_cta_lightblue);
+            font-weight: 400;
+            margin: 20px 0 10px;
+            font-size: 24px;
+        }
+        .txt_sect_prof{
+            margin: 0 0 20px;
+        }
+        .social_profile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    .c_resume_profile{
+        background: var(--bg_general);
+        padding: 50px;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+    picture{
+        border-radius: 100px;
+        overflow: hidden;
+        display: inline-block;
+        max-width: 150px;
+        max-height: 150px;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.c_resume_profile{
+
+}
+
+.t_profile{
+    text-align: left;
+    font-size: 16px;
+    min-width: 160px;
+    &.pri{
+        color: var(--txt_cta_lightblue);
+        margin: 0 0 20px;
+    }
+    &.sec{
+        color: var(--txt_cta_dark);
+        margin: 0;
+    }
+}
+
+.c_flex{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0 0 20px;
+}
+.txt_desc_profile{
+    margin: 0 0 30px;
+    line-height: 1.4;
+    ul{
+        padding: 0 30px;
+        margin: 0;
+        li{
+            margin: 0 0 10px;
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+    &:last-child{
+        margin: 0;
+    }
+}
+
 
 /* ************
 RESPONSIVE DESIGN
 ************ */
 
-
+@media screen and (max-width:1200px){
+    .slider_equipo_med .swiper-button-next{
+        right: 0;
+    }
+    .slider_equipo_med .swiper-button-prev{
+        left: 0;
+    }
+    .slider_equipo_med{
+        padding: 0 20px;
+    }
+}
 
 @media screen and (max-width:1050px){
     *{
@@ -1960,6 +2091,18 @@ RESPONSIVE DESIGN
         span{
             font-size: 40px;
         }
+    }
+    .c_perfil_pro .c_resume_profile{
+        padding: 30px;
+    }
+    .t_profile{
+        min-width: 120px;
+    }
+    .c_perfil_pro{
+        padding: 50px 0 80px;
+    }
+    .c_perfil_pro aside{
+        top: 85px;
     }
 }
 @media screen and (max-width:768px){
@@ -2177,6 +2320,41 @@ RESPONSIVE DESIGN
     .s_nuestro_equipo .c_icon_equipos{
         gap: 20px;
     }
+    .c_perfil_pro{
+        grid-template-columns: 1fr;
+        padding: 0px 0 80px;
+    }
+    .c_perfil_pro aside{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid #f4f4f4;
+        top: 60px;
+    }
+    .grand_c_desc_p{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .c_perfil_pro aside h4{
+        margin: 0px;
+        font-size: 20px;
+        text-align: left;
+    }
+    .c_perfil_pro picture{
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .c_perfil_pro aside .txt_sect_prof {
+        margin: 0 0 10px;
+        text-align: left;
+
+    }
+    .btn.social1{
+        width: 30px;
+        height: 30px;
+    }
 }
 @media screen and (max-width:480px){
     header .header_nav{
@@ -2262,5 +2440,16 @@ RESPONSIVE DESIGN
     }
     .c_direccion_cient{
         grid-template-columns: 1fr;
+    }
+    .c_perfil_pro aside{
+        padding: 20px;
+
+    }
+    .c_flex{
+        flex-direction: column;
+        gap: 6px;
+    }
+    .c_perfil_pro .c_resume_profile{
+        padding: 20px;
     }
 }
