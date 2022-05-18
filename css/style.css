@@ -2606,4 +2606,39 @@ RESPONSIVE DESIGN
   .c_perfil_pro .c_resume_profile {
     padding: 20px;
   }
+
+  .c_perfil_pro aside h4 {
+    font-size: 16px;
+  }
+
+  .c_perfil_pro picture {
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  .btn.social1 {
+    width: 24px;
+    height: 24px;
+  }
+  .btn.social1 span {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .c_perfil_pro picture {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .btn.social1 {
+    width: 20px;
+    height: 20px;
+  }
+  .btn.social1 span {
+    font-size: 10px;
+  }
+
+  .c_perfil_pro aside .txt_sect_prof {
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=style.css.map */
