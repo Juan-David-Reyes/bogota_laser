@@ -199,17 +199,17 @@ $(document).ready(function(){
                 // when window width is >= 320px
                 320: {
                   slidesPerView: 1,
-                  spaceBetween: 0
+                  spaceBetween: 20,
                 },
                 // when window width is >= 480px
                 600: {
                   slidesPerView: 2,
-                  spaceBetween: 20
+                  spaceBetween: 20,
                 },
                 // when window width is >= 640px
                 900: {
                   slidesPerView: 3,
-                  spaceBetween: 30
+                  spaceBetween: 30,
                 }
             }
             
@@ -227,7 +227,7 @@ $(document).ready(function(){
                 // when window width is >= 320px
                 320: {
                   slidesPerView: 1,
-                  spaceBetween: 0
+                  spaceBetween: 20,
                 },
                 // when window width is >= 480px
                 600: {
@@ -239,6 +239,32 @@ $(document).ready(function(){
                   slidesPerView: 3,
                   spaceBetween: 30
                 }
+            }
+            
+        });
+    }
+
+    function sliderVideos(){
+        let swiper = new Swiper(".swiperVideos", {
+            slidesPerView:1,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: ".c_sliderVideos .swiper-button-next",
+                prevEl: ".c_sliderVideos .swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20
+                },
+                // when window width is >= 480px
+                500: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                // when window width is >= 640px
+
             }
             
         });
@@ -300,6 +326,16 @@ $(document).ready(function(){
     }
 
 
+    function ajusteFooter(){
+
+        const seccionMediosPago = document.querySelector('.s_medios_pago');
+
+        if(!$(seccionMediosPago).is(':visible')){
+            $('footer').css('padding', '40px 0 0')
+        }
+    }
+
+
     
     /* EJECUCION DE FUNCIONES */
 
@@ -316,6 +352,8 @@ $(document).ready(function(){
     mMobileOperarseBL();
     sliderEquipoMedico();
     sliderNuestroEquipo()
+    sliderVideos();
 
     collapseFooter();
+    ajusteFooter();
 });
