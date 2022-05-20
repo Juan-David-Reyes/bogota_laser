@@ -347,6 +347,40 @@ $(document).ready(function(){
     }
 
 
+    function derechosDeberes(){
+        const btnDerecho = document.querySelectorAll('.btn_derecho');
+        const contenedor = document.querySelectorAll('.c_items_derechos');
+        let comparador = null;
+
+        btnDerecho.forEach((btn) =>{
+            btn.addEventListener('click', (e) => {
+                
+                btnDerecho.forEach((el) =>{
+                    el.classList.remove('active');
+                });
+                e.currentTarget.classList.add('active');
+
+                comparador = btn.dataset.categoria;
+                
+                contenedor.forEach((cont) =>{
+                    if(cont.dataset.categoria === comparador){
+                        cont.classList.add('active');
+                    }else{
+                        cont.classList.remove('active');
+                    }
+                });
+
+            });
+        });
+
+
+        btnDerecho.addEventListener('click', (e) =>{
+            btnDerecho.removeClass('active');
+            e.target.addClass('active');
+        })
+
+    }
+
     function ajusteFooter(){
 
         const seccionMediosPago = document.querySelector('.s_medios_pago');
@@ -374,7 +408,8 @@ $(document).ready(function(){
     sliderEquipoMedico();
     sliderNuestroEquipo()
     sliderVideos();
-    preguntasFrecuentes()
+    preguntasFrecuentes();
+    derechosDeberes();
 
     collapseFooter();
     ajusteFooter();

@@ -2322,6 +2322,100 @@ button[type=submit]{
     }
 }
 
+/* ESTILOS INTERNA DERECHOS Y DEBERES */
+
+
+.s_derechos_deberes{
+    background-color: #E5E5E5;
+    padding: 0 0 60px;
+}
+
+.grand_container_derechos{
+    margin: 60px 0 0;
+}
+.nav_derechos{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    ul{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 4px;
+        width: 100%;
+    }
+}
+.btn_derecho{
+    background-color: #EBEBEB;
+    color: #94999B;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 390px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px 4px  0 0;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+
+    &.active{
+        color: var(--txt_cta_lightblue);
+        background-color: var(--bg_cta_light);
+    }
+}
+
+
+.c_items_derechos{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap:30px;
+    justify-self: center;
+    background-color: var(--bg_general);
+    padding: 80px 100px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    &.active{
+        display: grid!important;
+    }
+}
+
+.item_derecho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    picture{
+        display: inline-block;
+        border-radius: 100px;
+        background-color: var(--color_pri);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            min-height: 60px;
+            min-width: 60px;
+        }
+    }
+    .desd_item_d{
+        text-align: left;
+        h4{
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            color: var(--txt_cta_lightblue);
+        }
+    }
+}
+
+
+
 
 
 
@@ -2477,6 +2571,17 @@ RESPONSIVE DESIGN
     }
     .c_perfil_pro aside{
         top: 85px;
+    }
+    .c_items_derechos{
+        padding: 60px 40px;
+    }
+    .btn_derecho{
+        width: 100%;
+        font-size: 16px;
+    }
+    .nav_derechos{
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 }
 @media screen and (max-width:768px){
@@ -2738,6 +2843,17 @@ RESPONSIVE DESIGN
     .s_preguntas_f::before{
         display: none;
     }
+    .item_derecho{
+        flex-direction: column;
+    }
+    .item_derecho .desd_item_d{
+        text-align: center;
+    }
+    .c_items_derechos {
+        padding: 30px 30px;
+        gap: 20px;
+        align-items: flex-start;
+    }
 }
 @media screen and (max-width:480px){
     header .header_nav{
@@ -2849,7 +2965,27 @@ RESPONSIVE DESIGN
             font-size: 13px;
         }
     }
-
+    .c_items_derechos{
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+    .item_derecho{
+        flex-direction: row;
+        gap: 20px;
+    }
+    .btn_derecho{
+        padding: 10px;
+        font-size: 14px;
+    }
+    .item_derecho .desd_item_d{
+        text-align: left;
+    }
+    .txt_d{
+        font-size: 13px;
+    }
+    .item_derecho picture{
+        align-self: flex-start;
+    }
 }
 @media screen and (max-width:390px){
     .c_perfil_pro picture {
