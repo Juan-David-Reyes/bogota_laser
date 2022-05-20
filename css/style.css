@@ -331,6 +331,17 @@ h1 {
   font-size: 13px;
 }
 
+select {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #FFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* *********** */
 header {
   position: fixed;
@@ -2218,10 +2229,26 @@ button[type=submit] {
 /* ESTILOS PREGUNTAS FRECUENTES */
 .s_preguntas_f {
   background-color: #F4F4F4;
+  padding: 0 0 80px;
+  box-sizing: border-box;
+  position: relative;
+}
+.s_preguntas_f::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 600px;
+  background: url("../images/diseno/07-preguntas-frecuentres/bg_section.png") no-repeat center;
+  background-size: contain;
+  mix-blend-mode: luminosity;
 }
 
 .c_preguntas_f {
   padding: 20px 0 0;
+  position: relative;
+  z-index: 1;
 }
 
 .grand_container_preguntas {
@@ -2229,6 +2256,10 @@ button[type=submit] {
   grid-template-columns: minmax(265px, 300px) 1fr;
   padding: 20px 0 0;
   box-sizing: border-box;
+  gap: 20px;
+}
+.grand_container_preguntas aside h4 {
+  margin: 0 0 10px;
 }
 .grand_container_preguntas .container_preguntas_f {
   display: grid;
@@ -2245,7 +2276,7 @@ button[type=submit] {
   grid-template-columns: 1fr 30px;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 14px;
+  padding: 14px 24px;
   gap: 20px;
   box-sizing: border-box;
   cursor: pointer;
@@ -2266,6 +2297,7 @@ button[type=submit] {
   transform: rotate(45deg);
   transition: 300ms ease;
   font-size: 12px;
+  align-self: center;
 }
 .c_tit_pregunta.active {
   color: var(--txt_cta_lightblue);
@@ -2277,6 +2309,57 @@ button[type=submit] {
 
 .item_respuesta_f {
   display: none;
+  padding: 0 30px 20px;
+  box-sizing: border-box;
+}
+.item_respuesta_f .txt {
+  margin-bottom: 20px;
+}
+.item_respuesta_f .vid {
+  width: 100%;
+}
+.item_respuesta_f .btn {
+  display: inline-block;
+}
+.item_respuesta_f .js-modal-btn {
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+  max-height: 329px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.item_respuesta_f .js-modal-btn::before {
+  content: "\f04b";
+  font-family: "Font Awesome 5 Pro";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: var(--color_pri);
+  inset: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--txt_cta_light);
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-left: 4px;
+  box-sizing: border-box;
+}
+.item_respuesta_f .js-modal-btn img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* ************
@@ -2769,6 +2852,14 @@ RESPONSIVE DESIGN
 
   .c_sliderVideos {
     padding: 0 20px;
+  }
+
+  .grand_container_preguntas {
+    grid-template-columns: 1fr;
+  }
+
+  .s_preguntas_f::before {
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {

@@ -334,8 +334,8 @@ $(document).ready(function(){
 
             
             if($(this).hasClass('active')){
-                $(this).next(respuesta).slideUp();
-                $(this).removeClass('active');
+                /* $(this).next(respuesta).slideUp();
+                $(this).removeClass('active'); */
             }else{
                 $(respuesta).slideUp();
                 $(pregunta).removeClass('active');
