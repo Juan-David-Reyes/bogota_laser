@@ -2220,10 +2220,121 @@ button[type=submit] {
   font-size: 50px;
 }
 
+.c_cards_club_bene {
+  max-width: 970px;
+  margin: 0 auto;
+}
 .c_cards_club_bene .c_header2 .tit_section {
   font-size: 20px;
   text-transform: none;
   color: var(--txt_cta_lightblue);
+}
+
+.cards_club_bene {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 60px 0 30px;
+  box-sizing: border-box;
+}
+.cards_club_bene .card_clubbeneficios {
+  background: #091B3A;
+  cursor: default;
+  border-radius: 16px;
+  height: 276px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+.cards_club_bene .cardbox {
+  font-size: 1.2em;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+.cards_club_bene .cardbox:hover .card_clubbeneficios {
+  transform: rotateY(180deg);
+}
+.cards_club_bene .card_clubbeneficios .frontcard,
+.cards_club_bene .card_clubbeneficios .backcard {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.cards_club_bene .card_clubbeneficios .backcard {
+  transform: rotateY(180deg);
+}
+.cards_club_bene .frontcard, .cards_club_bene .backcard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cards_club_bene .frontcard .fc_logo, .cards_club_bene .frontcard .bc_logo, .cards_club_bene .backcard .fc_logo, .cards_club_bene .backcard .bc_logo {
+  padding: 8px 0;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+}
+.cards_club_bene .frontcard .fc_logo img, .cards_club_bene .frontcard .bc_logo img, .cards_club_bene .backcard .fc_logo img, .cards_club_bene .backcard .bc_logo img {
+  width: 100%;
+  max-width: 195px;
+  max-height: 50px;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cards_club_bene .frontcard .fc_logo img, .cards_club_bene .backcard .fc_logo img {
+  filter: brightness(6);
+}
+.cards_club_bene .frontcard .fc_img, .cards_club_bene .backcard .fc_img {
+  width: 100%;
+  display: inline-block;
+  max-height: 246px;
+}
+.cards_club_bene .frontcard .fc_img img, .cards_club_bene .backcard .fc_img img {
+  width: 100%;
+  /* height: 100%; */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards_club_bene .backcard {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cards_club_bene .backcard h4, .cards_club_bene .backcard .bc_txt {
+  color: var(--txt_cta_light);
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 0 20px;
+}
+.cards_club_bene .backcard .cont_back_bene {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cont_cta {
+  padding: 20px 0 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.cont_cta a {
+  padding: 0;
+  font-size: 16px;
 }
 
 /* ESTILOS PREGUNTAS FRECUENTES */
@@ -2980,6 +3091,14 @@ RESPONSIVE DESIGN
     gap: 20px;
     align-items: flex-start;
   }
+
+  .cards_club_bene {
+    grid-template-columns: 1fr;
+  }
+
+  .c_header_club_bene .tit_section, .c_header_club_bene .tit_section span {
+    font-size: 38px;
+  }
 }
 @media screen and (max-width: 480px) {
   header .header_nav {
@@ -3144,6 +3263,15 @@ RESPONSIVE DESIGN
 
   .item_derecho picture {
     align-self: flex-start;
+  }
+
+  .cards_club_bene .card_clubbeneficios {
+    height: 216px;
+  }
+
+  .cards_club_bene .frontcard .fc_logo, .cards_club_bene .frontcard .bc_logo, .cards_club_bene .backcard .fc_logo, .cards_club_bene .backcard .bc_logo {
+    height: 37px;
+    margin: 6px 0;
   }
 }
 @media screen and (max-width: 390px) {

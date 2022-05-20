@@ -2178,6 +2178,8 @@ button[type=submit]{
 }
 
 .c_cards_club_bene{
+    max-width: 970px;
+    margin: 0 auto;
     .c_header2{
         .tit_section{
             font-size: 20px;
@@ -2186,6 +2188,117 @@ button[type=submit]{
         }
     }
 }
+
+.cards_club_bene{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 60px 0 30px;
+    box-sizing: border-box;
+    .card_clubbeneficios{
+        background: #091B3A;
+        cursor: default;
+        border-radius: 16px;
+        height: 276px;
+        transform-style: preserve-3d;
+        transition: transform 0.4s ease 0s;
+        width: 100%;
+        -webkit-animation: giro 1s 1;
+        animation: giro 1s 1;
+    }
+    .cardbox {
+        font-size: 1.2em;
+        perspective: 800px;
+        transition: all 0.3s ease 0s;
+        width: 100%;
+        &:hover{
+            .card_clubbeneficios {
+                transform: rotateY( 180deg);
+            }
+        } 
+    }
+    .card_clubbeneficios .frontcard,
+    .card_clubbeneficios .backcard {
+        backface-visibility: hidden;
+        box-sizing: border-box;
+        color: white;
+        display: block;
+        font-size: 1.2em;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+    .card_clubbeneficios .backcard {
+        transform: rotateY( 180deg);
+      }
+    .frontcard, .backcard{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        .fc_logo, .bc_logo{
+            padding: 8px 0;
+            box-sizing: border-box;
+            height: 50px;
+            width: 100%;
+            display: inline-block;
+            img{
+                width: 100%;
+                max-width: 195px;
+                max-height: 50px;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .fc_logo{
+            img{
+                filter: brightness(6);
+            }
+        }
+        .fc_img{
+            width: 100%;
+            display: inline-block;
+            max-height: 246px;
+            img{
+                width: 100%;
+                /* height: 100%; */
+                object-fit: cover;
+            }
+        }
+    }
+    .backcard{
+        display: flex!important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h4, .bc_txt{
+            color: var(--txt_cta_light);
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin: 0 0 20px;
+        }
+        .cont_back_bene{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    
+}
+
+.cont_cta{
+    padding: 20px 0 40px;
+    box-sizing: border-box;
+    text-align: center;
+    a{
+        padding: 0;
+        font-size: 16px;
+    }
+}
+
+
 
 
 /* ESTILOS PREGUNTAS FRECUENTES */
@@ -2413,6 +2526,21 @@ button[type=submit]{
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2854,6 +2982,13 @@ RESPONSIVE DESIGN
         gap: 20px;
         align-items: flex-start;
     }
+    .cards_club_bene{
+        grid-template-columns: 1fr;
+    }
+    .c_header_club_bene .tit_section, .c_header_club_bene .tit_section span{
+        font-size: 38px;
+    }
+
 }
 @media screen and (max-width:480px){
     header .header_nav{
@@ -2985,6 +3120,13 @@ RESPONSIVE DESIGN
     }
     .item_derecho picture{
         align-self: flex-start;
+    }
+    .cards_club_bene .card_clubbeneficios{
+        height: 216px;
+    }
+    .cards_club_bene .frontcard .fc_logo, .cards_club_bene .frontcard .bc_logo, .cards_club_bene .backcard .fc_logo, .cards_club_bene .backcard .bc_logo{
+        height: 37px;
+        margin: 6px 0;
     }
 }
 @media screen and (max-width:390px){
