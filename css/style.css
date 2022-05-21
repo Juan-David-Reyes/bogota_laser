@@ -2327,12 +2327,12 @@ button[type=submit] {
   justify-content: center;
 }
 
-.cont_cta {
+.cont_cta2 {
   padding: 20px 0 40px;
   box-sizing: border-box;
   text-align: center;
 }
-.cont_cta a {
+.cont_cta2 a {
   padding: 0;
   font-size: 16px;
 }
