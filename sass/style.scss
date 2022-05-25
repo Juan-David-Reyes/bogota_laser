@@ -48,6 +48,7 @@ h1{
 .tit_section{
     font-size: 2rem;
     text-align: center;
+    text-transform: uppercase;
     &.s2{
         font-size: 24px;
         color: var(--txt_cta_lightblue);
@@ -2526,18 +2527,132 @@ button[type=submit]{
         }
     }
 }
+.cultura_top{
+    width: 100%;
+    background: #f4f4f4;
+}
+.cont_pest_top{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.pest_top{
+    box-sizing: border-box;
+    padding:14px  8px;
+    background: #EBEBEB;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius:6px 6px 0 0;
+    color: #94999B;
+    cursor: pointer;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    &:hover{
+        background: #fff;
+    }
+    &.pest_cult{
+        width: 20%;
+        margin-right: 1px;
+        &:last-child{
+            margin-right: none;
+        }
+    }
+    &.active{
+        color:var(--color_pri) ;
+        background: #fff;
+    }
+}
+.s_cultura_info{
+    width: 100%;
+    background: #fff;
+    padding: 56px 0 150px;
+}
+.cont_gen_inf_cult{
+    width: 100%;
+    max-width: 930px;
+    margin: auto;
+}
+.cnt_inf_pest{
+    width: 100%;
+    opacity: 0;
+    display: none;
+    animation: inf_in 1s forwards;
+    &.active{
+        display: block;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+@keyframes inf_in{
+    from{opacity: 0; transform: translateY(200px);}
+    to{opacity: 1;transform:translateX(0);}
+}
+.top_part_social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 48px;
+}
+.img_part_social{
+    width: 55%;
+    position: relative;
+    img{
+        width: 100%;
+        height: 312px;
+        object-fit: cover;
+        border-radius: 4px 0 0 4px;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    }
+}
+.txt_top_part_social{
+    width: 40%;
+    font-size: 16px;
+    text-align: left;
+}
+.cnt2_part_soc{
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+}
+.list_part_soc{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 8%;
+    margin: 0;
+    li{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        a{
+            font-weight: bold;
+            color: var(--color_pri);
+        }
+    }
+}
+.ic_list_part_soc{
+    width: 47px;
+    height: 47px;
+    object-fit: contain;
+    margin-right: 24px;
+}
+.par_list_part_soc{
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+.chevron_pest{
+    display: none;
+}
 
 
 
@@ -2710,6 +2825,13 @@ RESPONSIVE DESIGN
     .nav_derechos{
         padding: 0 20px;
         box-sizing: border-box;
+    }
+    .s_cultura_info{
+        box-sizing: border-box;
+        padding:40px 5% ;
+    }
+    .pest_top{
+        font-size: 14px;
     }
 }
 @media screen and (max-width:768px){
@@ -2988,7 +3110,29 @@ RESPONSIVE DESIGN
     .c_header_club_bene .tit_section, .c_header_club_bene .tit_section span{
         font-size: 38px;
     }
-
+    .top_part_social{
+        padding-bottom: 32px;
+    }
+    .img_part_social{
+        width: 100%;
+        padding: 24px 0;
+        &:after{
+            display: none;
+        }
+        img{
+            border-radius: 4px;
+        }
+    }
+    .txt_top_part_social{
+        width: 100%;
+    }
+    .list_part_soc{
+        padding: 16px 0;
+    }
+    .pest_top{
+        font-size: 12px;
+    }
+    
 }
 @media screen and (max-width:480px){
     header .header_nav{
@@ -3128,6 +3272,34 @@ RESPONSIVE DESIGN
         height: 37px;
         margin: 6px 0;
     }
+    .cont_pest_top{
+        width: 95%;
+        flex-flow: column;
+    }
+    .pest_top{
+        width: 100%;
+        display: none;
+        font-size: 14px;
+        transition: none;
+        padding-right: 50px;
+        position: relative;
+        &.pest_cult{
+            width: 100%;
+            display: none;
+        }
+        &.active{
+            display: block !important;
+        }
+    }
+    .chevron_pest{
+        display: block;
+        position: absolute;
+        top: 12px;
+        font-size: 18px;
+        right: 24px;
+        color: var(--color_pri);
+        pointer-events: none;
+    }
 }
 @media screen and (max-width:390px){
     .c_perfil_pro picture {
@@ -3144,4 +3316,5 @@ RESPONSIVE DESIGN
     .c_perfil_pro aside .txt_sect_prof{
         font-size: 13px;
     }
+    
 }
