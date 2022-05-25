@@ -1,13 +1,51 @@
 $(document).ready(function(){
 
-    function colorMain(){
 
-        const s_medios_pago = null ;
-        
-        if($('')){
-
-        }
+    if($(window).width() < 480){
+        $('.pest_top').click(function(){
+            if($(this).hasClass('active')){
+                $('.pest_top').slideDown('fast')
+            }else{
+                
+                $('.pest_top').slideUp('fast');
+                $(this).addClass('active');
+                
+            }
+        });
     }
+
+     /* PESTAÑAS cultura*/
+    
+     const catg = document.querySelectorAll(".pest_top");
+     const infCatg = document.querySelectorAll(".cnt_inf_pest");
+ 
+     let selectCatg = null;
+     
+     catg.forEach((pest) => {
+        
+         pest.addEventListener("click", (e) => {
+             catg.forEach((el) => {
+                 el.classList.remove("active");
+             });
+             e.currentTarget.classList.toggle("active");
+             
+             selectCatg = pest.dataset.cat;
+             
+             infCatg.forEach((infel) => {
+                if(infel.dataset.cat === selectCatg){
+                    infel.classList.add("active");
+                }else{
+                    infel.classList.remove("active");
+                } 
+             });
+         });
+         
+     });
+
+
+     /*********/
+
+
     
     function dropdownMenu(){
 
@@ -334,8 +372,8 @@ $(document).ready(function(){
 
             
             if($(this).hasClass('active')){
-                /* $(this).next(respuesta).slideUp();
-                $(this).removeClass('active'); */
+                $(this).next(respuesta).slideUp();
+                $(this).removeClass('active');
             }else{
                 $(respuesta).slideUp();
                 $(pregunta).removeClass('active');
@@ -345,6 +383,47 @@ $(document).ready(function(){
 
         });
     }
+
+    function ajusteFooter(){
+
+        const seccionMediosPago = document.querySelector('footer .s_medios_pago');
+
+        if(!$(seccionMediosPago).is(':visible')){
+            console.log('asdasd')
+            $('footer').css('padding', '40px 0 0')
+        }
+    }
+
+    function sliderVideos(){
+        let swiper = new Swiper(".swiperLogosMedios", {
+            slidesPerView:1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".logos_medios .swiper-button-next",
+                prevEl: ".logos_medios .swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                520: {
+                  slidesPerView: 2,
+                  spaceBetween: 10
+                },
+                // when window width is >= 480px
+                700: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                },
+                900: {
+                  slidesPerView: 5,
+                  spaceBetween: 20
+                },
+                // when window width is >= 640px
+
+            }
+            
+        });
+    }
+    
 
 
     function derechosDeberes(){
@@ -381,14 +460,7 @@ $(document).ready(function(){
 
     }
 
-    function ajusteFooter(){
-
-        const seccionMediosPago = document.querySelector('.s_medios_pago');
-
-        if(!$(seccionMediosPago).is(':visible')){
-            $('footer').css('padding', '40px 0 0')
-        }
-    }
+   
 
 
     
@@ -397,7 +469,7 @@ $(document).ready(function(){
     navbarMobileMenu();
     dropdownMenu();
     searchBtn();
-    colorMain();
+
 
     sliderHomeHero();
     sliderBlogSection();
@@ -409,8 +481,9 @@ $(document).ready(function(){
     sliderNuestroEquipo()
     sliderVideos();
     preguntasFrecuentes();
-    derechosDeberes();
-
+    
     collapseFooter();
     ajusteFooter();
+
+    derechosDeberes();
 });

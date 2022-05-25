@@ -705,16 +705,17 @@ footer{
     color: var(--txt_cta_lightblue);
     font-weight: 700;
 }
-
+.swiperLogosMedios{
+    padding: 20px 0;
+    box-sizing: border-box;
+}
 .s_medios_pago{
     width: 100%;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     box-sizing: border-box;
     background-color: var(--bg_general);
     margin-bottom: 60px;
     .c_medios_pago{
-        display: flex;
-        gap: 20px;
         h5{
             margin: 0;
             max-width: 65px;
@@ -725,11 +726,15 @@ footer{
         }
     }
     .logos_medios{
-        overflow-x: scroll;
-        overflow-y: hidden;
         display: flex;
         align-items: center;
         gap: 20px;
+        padding: 0 50px;
+        box-sizing: border-box;
+        position: relative;
+        .swiper-button-next, .swiper-button-prev{
+            top: 50%;
+        }
         picture{
             display: inline-block;
             img{
@@ -2655,11 +2660,75 @@ button[type=submit]{
 }
 
 
+/* ESTILOS PESTAÑA CIUDADOS POST OPERATORIOS */
 
 
+.c_cuidados_post{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    .item_cuidados_post{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+}
+
+/* ESTILOS INTERNA DONACION DE ORGANOS */
+
+.c_recuadro_org{
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 0 0 40px;
+    h4.tit_section{
+        font-size: 20px;
+        margin: 0 0 30px;
+    }
+}
+.recu_org{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    align-items: center;
+    align-items: flex-start;
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 1px;
+        height: 50%;
+        background-color: #CCCCCC;
+    }
 
 
-
+        h5{
+            text-align: center;
+            margin: 0;
+        }
+    
+}
+.sub_c_tejidos, .sub_c_organos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 20px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    .itm_org_tej{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
+        label{
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}
 
 
 
@@ -3132,7 +3201,11 @@ RESPONSIVE DESIGN
     .pest_top{
         font-size: 12px;
     }
-    
+    .s_medios_pago .logos_medios{
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 20px 0;
+    }
 }
 @media screen and (max-width:480px){
     header .header_nav{
