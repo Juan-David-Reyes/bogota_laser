@@ -1394,7 +1394,7 @@ footer .subfooter {
 .s_header_int {
   width: 100%;
   position: relative;
-  max-height: 530px;
+  max-height: 480px;
   height: 100vh;
   display: flex;
   align-items: flex-start;
@@ -2793,6 +2793,92 @@ button[type=submit] {
 .sub_c_tejidos .itm_org_tej label, .sub_c_organos .itm_org_tej label {
   text-align: center;
   font-size: 14px;
+}
+
+/* ESTILOS INTERNA TRATAMIENTO */
+.s_tratamientos, .s_otros_tratamientos {
+  background-color: #F4F4F4;
+  padding: 60px 0 0;
+  box-sizing: border-box;
+}
+
+.s_otros_tratamientos {
+  padding: 60px 0;
+}
+
+.c_tratamientos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card_tratamientos {
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--bg_general);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.card_tratamientos a.img_trat {
+  display: inline-block;
+  overflow: hidden;
+  max-height: 210px;
+  position: relative;
+  width: 100%;
+}
+.card_tratamientos a.img_trat::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 158, 226, 0.3), rgba(0, 158, 226, 0.3)), linear-gradient(180deg, rgba(0, 0, 0, 0) 53.97%, rgba(0, 0, 0, 0.8) 100%);
+  background-blend-mode: hard-light, normal, normal;
+}
+.card_tratamientos a.img_trat img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card_tratamientos a.img_trat h3 {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 20px;
+  color: var(--txt_cta_light);
+  margin: 0;
+}
+.card_tratamientos h5 {
+  margin: 0;
+  font-size: 16px;
+}
+.card_tratamientos .desccard_trata {
+  margin: 0 0 10px;
+}
+.card_tratamientos .cont_card_trata {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.card_tratamientos .cont_card_trata .btn {
+  padding: 7px 40px;
+}
+
+.c_otros_tratamientos {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+}
+.c_otros_tratamientos h4 {
+  margin: 0;
 }
 
 /* ************
