@@ -3405,6 +3405,181 @@ button[type=submit] {
   margin: 60px 0 100px;
 }
 
+/* ESTILOS INTERNA TRABAJE CON NOSOTROS */
+.int_trabaje {
+  max-height: 380px;
+}
+.int_trabaje .head_desc_int {
+  background-color: transparent;
+}
+
+.s_nuestra_gente {
+  margin: 80px 0;
+}
+
+.c_nuestra_gente {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  align-items: center;
+}
+.c_nuestra_gente .cont_vid_img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.c_nuestra_gente .cont_vid_img picture, .c_nuestra_gente .cont_vid_img a {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.c_nuestra_gente .cont_vid_img picture img, .c_nuestra_gente .cont_vid_img a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c_nuestros_valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 11fr));
+  gap: 20px;
+}
+.c_nuestros_valores .item_nv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.s_mision_vision {
+  margin: 100px 0 70px;
+}
+
+.c_mision_vision {
+  width: 100%;
+  max-width: 930px;
+  margin: 0 auto;
+}
+.c_mision_vision nav {
+  transform: translateY(2px);
+}
+.c_mision_vision ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 2px;
+}
+.c_mision_vision ul li a {
+  display: inline-block;
+  color: #94999B;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background-color: #EBEBEB;
+  border-radius: 6px 6px 0 0;
+  width: 100vw;
+  max-width: 270px;
+  font-weight: 700;
+}
+.c_mision_vision ul li a.active {
+  color: var(--txt_cta_lightblue);
+  border: 1px solid #CCCCCC;
+  border-bottom: 1px solid #FFF;
+  background-color: #FFF;
+}
+.c_mision_vision .desc_mision_vision {
+  padding: 70px 80px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #CCCCCC;
+}
+
+.s_form_trabaja {
+  background-color: var(--color_pri);
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+.c_form_trabaja {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  max-width: 930px;
+  margin: auto;
+  gap: 30px;
+}
+.c_form_trabaja .form_tn {
+  background-color: var(--bg_cta_light);
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.c_form_trabaja .form_tn .cont_input {
+  margin: 0 0 10px;
+}
+.c_form_trabaja .form_tn .cont_input select {
+  border-radius: 100px;
+  font-size: 14px;
+  color: #94999B;
+}
+.c_form_trabaja .c_tit_section {
+  width: 100%;
+  max-width: 360px;
+  justify-self: flex-start;
+}
+.c_form_trabaja .c_tit_section h3 {
+  text-align: left;
+}
+.c_form_trabaja .c_tit_section div {
+  text-align: left;
+}
+
+.cont_input_x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 10px;
+}
+.cont_input_x2 input {
+  height: 35px;
+  border-radius: 100px;
+  border: 1px solid #CCCCCC;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  position: relative;
+}
+
+.cont_input.file input {
+  border: 1px solid #CCCCCC;
+  padding: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.cont_input.file input::-webkit-file-upload-button {
+  background-color: var(--color_pri);
+  border-radius: 100px;
+  color: var(--txt_cta_light);
+  outline: 0;
+  border: 0;
+  padding: 8px;
+}
+
+.cont_input.chk {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 /* ************
 RESPONSIVE DESIGN
 ************ */
@@ -3625,7 +3800,7 @@ RESPONSIVE DESIGN
     padding: 30px 40px;
   }
 }
-@media screen and (max-width: 1050px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .tit_section {
     font-size: 1.6em;
   }
@@ -4002,76 +4177,67 @@ RESPONSIVE DESIGN
   .item_info_procedimientos {
     grid-template-columns: 1fr;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .item_info_procedimientos .video_testimonio.js-modal-btn {
     width: 100%;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .c_it_trata .ctas_trata {
     flex-direction: column;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .nav_procedimientos ul {
     flex-direction: column;
     gap: 10px;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .nav_procedimientos ul a {
     display: inline-block;
     min-width: 200px;
     text-align: center;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .c_it_ofertaespecial {
     grid-template-columns: 1fr;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .c_it_ofertaespecial .c_desc_ofertaespecial p {
     max-width: initial;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .c_it_ofertaespecial {
     gap: 0;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .c_it_ofertaespecial {
     padding: 20px;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .c_it_ofertaespecial .btn {
     width: 100%;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .item_info_procedimientos .contenido_proced .itms_bene_proced {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .subcont {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .c_desc_cirugia {
     padding: 20px;
   }
-}
-@media screen and (max-width: 1050px) {
+
   .c_desc_cirugia {
     flex-direction: column;
     gap: 6px;
+  }
+
+  .c_nuestra_gente {
+    grid-template-columns: 1fr;
   }
 }
 @media screen and (max-width: 480px) {
@@ -4316,5 +4482,9 @@ RESPONSIVE DESIGN
 
   .c_perfil_pro aside .txt_sect_prof {
     font-size: 13px;
+  }
+
+  .c_nuestra_gente .cont_vid_img {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
