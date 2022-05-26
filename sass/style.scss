@@ -198,6 +198,17 @@ h1{
         color: var(--txt_cta_lightblue);
         padding: 10px;
     }
+    &.outlinelight{
+        border: 1px solid var(--bg_cta_light);
+        color: var(--txt_cta_light);
+        border-radius: 100px;
+        background-color: transparent;
+    }
+    &.outlineblue{
+        border: 1px solid var(--txt_cta_lightblue);
+        background-color: transparent;
+        color: var(--txt_cta_lightblue);
+    }
     &::before{
         content: '';
         position: absolute;

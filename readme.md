@@ -42,6 +42,11 @@
 
     btn social1
 
+    btn light
+
+    btn outline_light
+
+    btn outlineblue
 
 
 ## ESTILOS AL MAIN
