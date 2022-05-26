@@ -3117,6 +3117,10 @@ button[type=submit] {
   padding-left: 0;
 }
 
+.color2 {
+  background-color: #F4F4F4;
+}
+
 .c_tit_nav_procedimientos {
   display: flex;
   flex-direction: column;
