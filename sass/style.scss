@@ -3338,6 +3338,182 @@ button[type=submit]{
     margin: 60px 0 100px;
 }
 
+/* ESTILOS INTERNA TRABAJE CON NOSOTROS */
+
+.int_trabaje{
+    max-height: 380px;
+    .head_desc_int{
+        background-color: transparent;
+    }
+}
+
+.s_nuestra_gente{
+    margin: 80px 0;
+}
+.c_nuestra_gente{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: center;
+    .cont_vid_img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        picture, a{
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 6px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.c_nuestros_valores{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 11fr));
+    gap: 20px;
+    .item_nv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+}
+.s_mision_vision{
+    margin: 100px 0 70px;
+}
+.c_mision_vision{
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto;
+    nav{
+        transform: translateY(2px);
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        gap: 2px;
+        li{
+            a{
+                display: inline-block;
+                color: #94999B;
+                font-size: 18px;
+                text-align: center;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                border: 1px solid transparent;
+                background-color: #EBEBEB;
+                border-radius: 6px 6px 0 0;
+                width: 100vw;
+                max-width: 270px;
+                font-weight: 700;
+                &.active{
+                    color: var(--txt_cta_lightblue);
+                    border: 1px solid #CCCCCC;
+                    border-bottom: 1px solid #FFF;
+                    background-color: #FFF;
+                }
+            }
+        }
+    }
+    .desc_mision_vision{
+        padding: 70px 80px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        border: 1px solid #CCCCCC;
+    }
+}
+
+.s_form_trabaja{
+    background-color: var(--color_pri);
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+.c_form_trabaja{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    max-width: 930px;
+    margin: auto;
+    gap:30px;
+    .form_tn{
+        background-color: var(--bg_cta_light);
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        .cont_input{
+            margin: 0 0 10px;
+            select{
+                border-radius: 100px;
+                font-size: 14px;
+                color: #94999B;
+            }
+        }
+    }
+    .c_tit_section{
+        width: 100%;
+        max-width: 360px;
+        justify-self: flex-start;
+        h3{
+            text-align: left;
+        }
+        div{
+            text-align: left;
+        }
+    }
+}
+
+.cont_input_x2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    margin: 0 0 10px;
+    input{
+        height: 35px;
+        border-radius: 100px;
+        border: 1px solid #CCCCCC;
+        padding: 8px;
+        box-sizing: border-box;
+        font-size: 14px;
+        position: relative;
+    }
+}
+
+.cont_input.file{
+    input{
+        border: 1px solid #CCCCCC;
+        padding: 0;
+        height: fit-content;
+        &::-webkit-file-upload-button{
+            background-color: var(--color_pri);
+            border-radius: 100px;
+            color: var(--txt_cta_light);
+            outline: 0;
+            border: 0;
+            padding: 8px;
+        }
+    }
+}
+
+.cont_input.chk{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
 
 /* ************
 RESPONSIVE DESIGN
@@ -3516,6 +3692,7 @@ RESPONSIVE DESIGN
     }
     .c_it_ofertaespecial{
         padding: 30px 40px;
+    }
 }
 @media screen and (max-width:768px){
     .tit_section{
@@ -3826,8 +4003,7 @@ RESPONSIVE DESIGN
     .item_info_procedimientos{
         grid-template-columns: 1fr;
     }
-    
-    }.item_info_procedimientos .video_testimonio.js-modal-btn{
+    .item_info_procedimientos .video_testimonio.js-modal-btn{
         width: 100%;
     }
     .c_it_trata .ctas_trata{
@@ -3871,6 +4047,9 @@ RESPONSIVE DESIGN
     .c_desc_cirugia{
         flex-direction: column;
         gap: 6px;
+    }
+    .c_nuestra_gente{
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width:480px){
@@ -4071,5 +4250,7 @@ RESPONSIVE DESIGN
     .c_perfil_pro aside .txt_sect_prof{
         font-size: 13px;
     }
-    
+    .c_nuestra_gente .cont_vid_img{
+        grid-template-columns: 1fr;
+    }
 }
