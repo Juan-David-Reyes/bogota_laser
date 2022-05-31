@@ -3463,7 +3463,7 @@ button[type=submit] {
   margin: 0 auto;
 }
 .c_mision_vision nav {
-  transform: translateY(2px);
+  transform: translateY(1px);
 }
 .c_mision_vision ul {
   display: flex;
@@ -3487,6 +3487,11 @@ button[type=submit] {
   width: 100vw;
   max-width: 270px;
   font-weight: 700;
+  border-bottom: 1px solid #CCC;
+  transition: 300ms ease;
+}
+.c_mision_vision ul li a:hover {
+  background-color: #e0e0e0;
 }
 .c_mision_vision ul li a.active {
   color: var(--txt_cta_lightblue);
@@ -3578,6 +3583,68 @@ button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.trabaje_chk input {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+.trabaje_chk label a {
+  text-decoration: underline;
+  color: var(--active_link);
+}
+
+.s_nuestras_vacantes {
+  background: #F4F4F4;
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+.s_nuestras_vacantes .cont_btn {
+  margin: 60px 0 0;
+}
+.s_nuestras_vacantes .tit_section {
+  margin: 0 0 50px;
+}
+
+.cont_cards_vacantes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.card_vacante {
+  background: #FFFFFF;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.card_vacante h5 {
+  margin: 0 0 10px;
+  color: var(--color_pri);
+  font-size: 20px;
+}
+.card_vacante .precio_vacante, .card_vacante .ubi_vacante {
+  margin: 0 0 10px;
+  display: block;
+}
+.card_vacante .precio_vacante span, .card_vacante .ubi_vacante span {
+  font-weight: 800;
+  margin: 4px;
+  color: var(--color_pri);
+  width: 20px;
+}
+.card_vacante .cont_btn {
+  margin: 14px 0 0;
+  height: 30px;
+}
+.card_vacante .cont_btn a {
+  padding: 4px 24px;
 }
 
 /* ************
@@ -4239,6 +4306,18 @@ RESPONSIVE DESIGN
   .c_nuestra_gente {
     grid-template-columns: 1fr;
   }
+
+  .c_form_trabaja {
+    flex-direction: column;
+  }
+
+  .c_form_trabaja .c_tit_section {
+    max-width: initial;
+  }
+
+  .c_mision_vision ul li a {
+    max-width: 200px;
+  }
 }
 @media screen and (max-width: 480px) {
   header .header_nav {
@@ -4464,6 +4543,18 @@ RESPONSIVE DESIGN
 
   .images_ciru img {
     max-width: 110px;
+  }
+
+  .cont_input_x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .c_mision_vision ul li a {
+    max-width: 130px;
+  }
+
+  .c_mision_vision .desc_mision_vision {
+    padding: 50px 40px;
   }
 }
 @media screen and (max-width: 390px) {
