@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="plugins/swiper_slider/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.12.1/datatables.min.css"/>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -155,22 +156,92 @@
     <main>
         <div class="spacer"></div>
 
-                <section class="s_header_examenes_d">
+            <section class="s_header_examenes_d">
+
+                <div class="center">
+                    <div class="miga">
+                        <a href="" class="link_miga">Bogotá Laser</a>
+                        <span> / </span>
+                        <a href="" class="link_miga">defectos visuales</a>
+                    </div>
+                    <h1 class="tit_section">
+                        Test de osdi
+                    </h1>
+                    <div class="desc_section">
+                        Se creó para establecer el tipo de gravedad y clasificación del ojo seco según su sintomatología. El test da una primera indicación de la posibilidad de ojo seco, así como del tipo de tratamiento a seguir respondiendo el siguiente cuestionario.
+                    </div>
+
+            </section>
+
+            <section class="s_test_osid">
+                <div class="center">
+                    <div class="c_test_osid">
+                        <h4>1- ¿HA EXPERIMENTADO ALGUNA DE LAS SIGUIENTES ALTERACIONES DURANTE LAS ÚLTIMAS SEMANAS? </h4>
 
 
-                    <div class="center">
-                        <div class="miga">
-                            <a href="" class="link_miga">Bogotá Laser</a>
-                            <span> / </span>
-                            <a href="" class="link_miga">defectos visuales</a>
+                        <div class="cont_datatable">
+                            <table id="tableTest" class="display order-column nowrap" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th class="data_left tit_table w40">Síntomas físicos</th>
+                                        <th class="data_center tit_table w20">En todo momento</th>
+                                        <th class="data_center tit_table">Casi en todo momento</th>
+                                        <th class="data_center tit_table">En el 50% del tiempo</th>
+                                        <th class="data_center tit_table">Casi en ningún momento</th>
+                                        <th class="data_center tit_table">En ningun momento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="data_left">1. Sensibilidad a la luz</td>
+                                        <td class="data_center"><input type="radio" name="sensivilidad a la luz" value></td>
+                                        <td class="data_center"><input type="radio" name="sensivilidad a la luz" value></td>
+                                        <td class="data_center"><input type="radio" name="sensivilidad a la luz" value></td>
+                                        <td class="data_center"><input type="radio" name="sensivilidad a la luz" value></td>
+                                        <td class="data_center"><input type="radio" name="sensivilidad a la luz" value></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data_left">2. Sensación de arenilla en los ojos</td>
+                                        <td class="data_center"><input type="radio" name="sensacion ojos" value></td>
+                                        <td class="data_center"><input type="radio" name="sensacion ojos" value></td>
+                                        <td class="data_center"><input type="radio" name="sensacion ojos" value></td>
+                                        <td class="data_center"><input type="radio" name="sensacion ojos" value></td>
+                                        <td class="data_center"><input type="radio" name="sensacion ojos" value></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data_left">3. Dolor de ojos</td>
+                                        <td class="data_center"><input type="radio" name="dolor ojos" value></td>
+                                        <td class="data_center"><input type="radio" name="dolor ojos" value></td>
+                                        <td class="data_center"><input type="radio" name="dolor ojos" value></td>
+                                        <td class="data_center"><input type="radio" name="dolor ojos" value></td>
+                                        <td class="data_center"><input type="radio" name="dolor ojos" value></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data_left">4. Visión borrosa</td>
+                                        <td class="data_center"><input type="radio" name="vision borrosa" value></td>
+                                        <td class="data_center"><input type="radio" name="vision borrosa" value></td>
+                                        <td class="data_center"><input type="radio" name="vision borrosa" value></td>
+                                        <td class="data_center"><input type="radio" name="vision borrosa" value></td>
+                                        <td class="data_center"><input type="radio" name="vision borrosa" value></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data_left">5. Mala visión</td>
+                                        <td class="data_center"><input type="radio" name="mala vision" value></td>
+                                        <td class="data_center"><input type="radio" name="mala vision" value></td>
+                                        <td class="data_center"><input type="radio" name="mala vision" value></td>
+                                        <td class="data_center"><input type="radio" name="mala vision" value></td>
+                                        <td class="data_center"><input type="radio" name="mala vision" value></td>
+                                    </tr>
+                                    
+ 
+                                </tfoot>
+                            </table>
                         </div>
-                        <h1 class="tit_section">
-                            Test de osdi
-                        </h1>
-                        <div class="desc_section">
-                            Se creó para establecer el tipo de gravedad y clasificación del ojo seco según su sintomatología. El test da una primera indicación de la posibilidad de ojo seco, así como del tipo de tratamiento a seguir respondiendo el siguiente cuestionario.
-                        </div>
-                </section>
+
+
+                    </div>
+                </div>
+            </section>
 
     </main>
 
@@ -181,7 +252,18 @@
         <!-- SCRIPTS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="./plugins/swiper_slider/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.12.1/datatables.min.js"></script>
         <script src="./js/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#tableTest').DataTable({
+                    columns: [
+                        { orderable: false }
+                    ],
+                });
+            });
+        </script>
         <!-- ************** -->
 
         <section class="s_medios_pago">
