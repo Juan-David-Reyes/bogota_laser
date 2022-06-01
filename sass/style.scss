@@ -3781,6 +3781,7 @@ border-radius: 8px;
     display: flex;
     grid-template-columns: 1fr 2fr;
     align-items: flex-start;
+    
     .btn_menu_dv{
         display: none;
     }
@@ -3887,7 +3888,9 @@ border-radius: 8px;
 }
 
 
-
+.c_defectos_visuales + .cont_btn{
+    padding: 40px 0 0;
+}
 
 
 
