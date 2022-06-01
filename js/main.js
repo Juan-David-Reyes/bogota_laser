@@ -14,6 +14,26 @@ $(document).ready(function(){
         });
     }
 
+    /*  INTERNA DEFECTOS VISUALES MENU MOBILE - TABS */
+
+    function defectosVisualesMenu(){
+
+        const btnMenu = document.querySelector('.btn_menu_dv');
+        const menuDV = document.querySelector('.items_btn_dv');
+
+        $(btnMenu).click(function(){
+            $(menuDV).toggleClass('active');
+        });
+
+        const btnItemDV = document.querySelectorAll('.items_btn_dv a');
+
+        $(btnItemDV).click(function(){
+            $(btnItemDV).removeClass('active');
+            $(this).addClass('active');
+        });
+    }
+
+
      /* PESTAÑAS cultura*/
     
      const catg = document.querySelectorAll(".pest_top");
@@ -470,7 +490,7 @@ $(document).ready(function(){
     dropdownMenu();
     searchBtn();
 
-
+    defectosVisualesMenu();
     sliderHomeHero();
     sliderBlogSection();
     sliderItems();
