@@ -365,15 +365,17 @@ select {
   box-sizing: border-box;
   background-color: #FFF;
   border: 1px solid #CCCCCC;
-  border-radius: 4px;
+  border-radius: 200px;
+  font-size: 14px;
+  color: #727272;
   cursor: pointer;
 }
 
 textarea {
-  width: 98%;
+  width: 100%;
   max-height: 100px;
   border-radius: 20px;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #d2d2d2;
   padding: 10px;
   box-sizing: border-box;
   outline: 0;
@@ -3549,6 +3551,7 @@ button[type=submit] {
   border-radius: 100px;
   font-size: 14px;
   color: #94999B;
+  width: 100%;
 }
 
 .c_form_trabaja {
@@ -3594,6 +3597,7 @@ button[type=submit] {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: 100%;
 }
 .cont_input.file input::-webkit-file-upload-button {
   background-color: var(--color_pri);
@@ -3692,7 +3696,8 @@ button[type=submit] {
   content: "";
   position: absolute;
   background: url("../images/diseno/16-pqr/img_fondo_azul.png") no-repeat center left;
-  width: 50%;
+  background-size: contain;
+  width: 100%;
   left: 0;
   top: 0;
   bottom: 0;
@@ -3703,6 +3708,8 @@ button[type=submit] {
 .cont_azul_pqr .center {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
+  z-index: 1;
 }
 .cont_azul_pqr .center form {
   grid-column: 2/3;
@@ -4379,6 +4386,15 @@ RESPONSIVE DESIGN
   .c_mision_vision ul li a {
     max-width: 200px;
   }
+
+  .cont_azul_pqr .center {
+    grid-template-columns: 1fr;
+  }
+
+  .cont_azul_pqr .center form {
+    grid-column: initial;
+    justify-self: center;
+  }
 }
 @media screen and (max-width: 480px) {
   header .header_nav {
@@ -4638,5 +4654,13 @@ RESPONSIVE DESIGN
 
   .c_nuestra_gente .cont_vid_img {
     grid-template-columns: 1fr;
+  }
+
+  .form_tn {
+    padding: 14px;
+  }
+
+  .trabaje_chk label {
+    font-size: 13px;
   }
 }/*# sourceMappingURL=style.css.map */
