@@ -3837,7 +3837,10 @@ button[type=submit] {
 }
 
 .s_defectos_visuales {
-  padding: 0 0 80px;
+  padding: 40px 0 80px;
+}
+.s_defectos_visuales .tit_section {
+  margin: 0 0 40px;
 }
 
 .s_header_dv {
@@ -3878,6 +3881,7 @@ button[type=submit] {
   color: #94999B;
   font-weight: 600;
   font-size: 18px;
+  cursor: pointer;
 }
 .c_defectos_visuales .menu_dv .items_btn_dv a.active {
   color: var(--txt_cta_lightblue);
@@ -3929,8 +3933,8 @@ button[type=submit] {
   z-index: 1;
 }
 .content_aside_dv picture img:nth-child(2) {
-  -webkit-mask-image: url(../images/diseno/20-defectos-visuales/mascara.svg);
-          mask-image: url(../images/diseno/20-defectos-visuales/mascara.svg);
+  -webkit-mask-image: url(../images/diseno/19-defectos-visuales/mascara.svg);
+          mask-image: url(../images/diseno/19-defectos-visuales/mascara.svg);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-size: cover;

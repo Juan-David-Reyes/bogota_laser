@@ -3766,7 +3766,10 @@ border-radius: 8px;
     background-color: #F4F4F4;
 }
 .s_defectos_visuales{
-    padding: 0 0 80px;
+    padding: 40px 0 80px;
+    .tit_section{
+        margin: 0 0 40px;
+    }
 }
 .s_header_dv{
     padding: 0 0 40px;
@@ -3801,6 +3804,7 @@ border-radius: 8px;
                 color: #94999B;
                 font-weight: 600;
                 font-size: 18px;
+                cursor: pointer;
                 &.active{
                     color: var(--txt_cta_lightblue);
                     background-color: var(--bg_cta_light);
@@ -3851,7 +3855,7 @@ border-radius: 8px;
             object-fit: cover;
             z-index: 1;
             &:nth-child(2){
-                mask-image: url(../images/diseno/20-defectos-visuales/mascara.svg);
+                mask-image: url(../images/diseno/19-defectos-visuales/mascara.svg);
                 mask-repeat: no-repeat;
                 mask-size: cover;
                 mask-position: calc(50% - -290px);
