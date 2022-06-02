@@ -5295,12 +5295,16 @@ RESPONSIVE DESIGN
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		gap: 10px;
 		border-radius: 4px;
-		width: 30px;
+		width: 100px;
 		height: 30px;
 		background-color: #fff;
 		color: var(--txt_cta_lightblue);
 		font-size: 20px;
+		div{
+			font-weight: 700;
+		}
 	}
 	.items_btn_dv {
 		position: absolute;
