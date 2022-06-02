@@ -4449,6 +4449,7 @@ summary {
 .row_nota aside > h3 {
   font-size: 18px;
 }
+
 .c_notas_aside {
   display: grid;
   grid-template-columns: 1fr;
