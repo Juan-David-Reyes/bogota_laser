@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="plugins/swiper_slider/swiper-bundle.min.css">
+    <link rel="stylesheet" href="plugins/swiper_slider/swiper-bundle.min.css">
+    <link rel="stylesheet" href="plugins/modal_video/modal-video.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -204,11 +206,9 @@
                                 <p>
                                     Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia.
                                 </p>
-                                <div class="video">
-                                    <a href="" class="">
-                                        <img src="" alt="">
-                                    </a>
-                                </div>
+                                <picture class="js-modal-btn" data-video-id="7TUOI23spt0">
+                                    <img width="740" height="339" src="https://picsum.photos/400/300" alt="">
+                                </picture>
                                 <p>
                                     Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32.
                                 </p>
@@ -216,10 +216,41 @@
                                     <a href="" class="btn lightblue">Reserva tu cita</a>
                                 </div>
                             </div>
+                            <div class="data_q_nota">
+                                <div class="social_share">
+                                    <h4>Comparte</h4>
+                                    <div class="">
+                                        <a href="">
+                                            <span class="fab fa-linkedin-in"></span>
+                                        </a>
+                                        <a href="">
+                                            <span class="fab fa-facebook-f"></span>
+                                        </a>
+                                        <a href="">
+                                            <span class="fab fa-whatsapp"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="calificacion">
+                                    <h4>Califica esta nota</h4>
+                                    <div>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="paginador_nota">
+                                <a href=""> <span class="fas fa-arrow-left"></span> Nota anterior </a>
+                                <a href=""> </span> Nota siguiente <span class="fas fa-arrow-right"></span></a>
+                            </div>
                         </article>
     
                         <aside>
-                            <h3>Lo màs leido></h3>
+                            <h3>Lo màs leido</h3>
                             <div class="c_notas_aside">
                                 <div class="desc_card_nota">
                                     <div class="datos_nota">
@@ -253,34 +284,10 @@
                                 </div>
                             </div>
                         </aside>
+                        
 
                     </div>
 
-                    <div class="data_q_nota">
-                        <div class="social_share">
-                            <a href="">
-                                <span class="fab fa-linkedin-in"></span>
-                            </a>
-                            <a href="">
-                                <span class="fab fa-facebook-f"></span>
-                            </a>
-                            <a href="">
-                                <span class="fab fa-whatsapp"></span>
-                            </a>
-                        </div>
-                        <div class="calificacion">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-
-                    <div class="paginador_nota">
-                        <a href=""> <span class="fas fa-arrow-left"></span> Nota anterior </a>
-                        <a href=""> <span class="fas fa-arrow-right"></span> Nota siguiente </a>
-                    </div>
                 </div>
             </section>    
 
@@ -293,7 +300,13 @@
         <!-- SCRIPTS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="./plugins/swiper_slider/swiper-bundle.min.js"></script>
+        <script src="./plugins/modal_video/jquery-modal-video.min.js"></script>
+        <script src="./plugins/modal_video/modal-video.min.js"></script>
         <script src="./js/main.js"></script>
+
+        <script>
+            $(".js-modal-btn").modalVideo();
+        </script>
         <!-- ************** -->
 
         <section class="s_medios_pago">
