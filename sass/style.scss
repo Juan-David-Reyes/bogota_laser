@@ -2479,6 +2479,10 @@ button[type="submit"] {
 	border-radius: 4px;
 	overflow: hidden;
 	position: relative;
+    picture{
+        display: inline-block;
+        cursor: pointer;
+    }
 	img {
 		width: 100%;
 		height: 100%;
@@ -2654,6 +2658,7 @@ button[type="submit"] {
 	width: 100%;
 	display: flex;
 	position: relative;
+    justify-content: center;
 }
 .pest_top {
 	box-sizing: border-box;
@@ -2668,6 +2673,7 @@ button[type="submit"] {
 	transition: all 0.3s;
 	display: flex;
 	align-items: center;
+    justify-content: center;
 	&:hover {
 		background: #fff;
 	}
@@ -4369,7 +4375,7 @@ summary {
 	grid-template-columns: 2fr 1fr;
 	gap: 60px;
 	align-items: stretch;
-    margin: 60px 0 80px;
+	margin: 60px 0 80px;
 	aside {
 		height: fit-content;
 		position: sticky;
@@ -4410,133 +4416,257 @@ summary {
 }
 
 .header_article {
-    picture{
-        width: 100%;
-        height: 100%;
-        max-height: 340px;
-        border-radius: 8px;
-        overflow: hidden;
-        display: inline-block;
-        margin: 10px 0;
-        img{
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-    h1{
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-    h6{
-        margin: 0;
-        font-weight: 400;
-        font-size: 14px;
-        color: var(--color_pri);
-    }
-    .datos_nota{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .by{
-            font-size: 14px;
-            span{
-                font-size: 14px;
-                color: var(--color_pri);
-            }
-        }
-    }
+	picture {
+		width: 100%;
+		height: 100%;
+		max-height: 340px;
+		border-radius: 8px;
+		overflow: hidden;
+		display: inline-block;
+		margin: 10px 0;
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	h1 {
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	h6 {
+		margin: 0;
+		font-weight: 400;
+		font-size: 14px;
+		color: var(--color_pri);
+	}
+	.datos_nota {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.by {
+			font-size: 14px;
+			span {
+				font-size: 14px;
+				color: var(--color_pri);
+			}
+		}
+	}
 }
 
-.txt_article{
-    p{
-        line-height: 1.5;
-    }
-    ul{
-        li{
-            margin: 0 0 10px;
-        }
-    }
-    .js-modal-btn{
-        display: inline-block;
-        width: 100%;
-        max-height: 339px;
-        cursor: pointer;
-    }
-    .cont_btn{
-        margin:40px 0 20px;
-        padding:  0 0 40px;
-        border-bottom: 1px solid #d2d2d2;
-    }
+.txt_article {
+	p {
+		line-height: 1.5;
+	}
+	ul {
+		li {
+			margin: 0 0 10px;
+		}
+	}
+	.js-modal-btn {
+		display: inline-block;
+		width: 100%;
+		max-height: 339px;
+		cursor: pointer;
+	}
+	.cont_btn {
+		margin: 40px 0 20px;
+		padding: 0 0 40px;
+		border-bottom: 1px solid #d2d2d2;
+	}
 }
 
-.data_q_nota{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 20px 0 40px;
+.data_q_nota {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	padding: 20px 0 40px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #d2d2d2;
+	h4 {
+		font-size: 16px;
+		margin: 0 0 10px;
+		color: #3d3d3d;
+	}
+	.calificacion {
+		justify-self: flex-end;
+		div {
+			display: flex;
+			justify-content: flex-end;
+			gap: 4px;
+		}
+		span {
+			color: #c4c4c4;
+			cursor: pointer;
+		}
+		.checked {
+			color: var(--color_pri);
+		}
+	}
+}
+
+.paginador_nota {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	align-items: center;
+	margin: 30px 0;
+	a {
+		color: var(--txt_cta_lightblue);
+		font-weight: 700;
+		display: flex;
+		gap: 10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	a:last-child {
+		grid-column: 2 / 3;
+		justify-self: flex-end;
+	}
+}
+
+.social_share {
+	div {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		a {
+			background-color: var(--color_pri);
+			color: var(--txt_cta_light);
+			border-radius: 100px;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+/* ESTILOS INTERNA VISION CARE */
+
+.s_contenido_r{
+    padding: 50px 0;
     box-sizing: border-box;
-    border-bottom: 1px solid #d2d2d2;
-    h4{
-        font-size: 16px;
-        margin: 0 0 10px;
-        color: #3D3D3D;
-    }
-    .calificacion{
-        justify-self: flex-end; 
-        div{
-            display: flex;
-            justify-content: flex-end;
-            gap: 4px; 
-
-        }
-        span{
-            color: #C4C4C4;
-            cursor: pointer;
-        }
-        .checked{
-            color: var(--color_pri);
-        }
+    background-color: #F4F4F4;
+    .tit_section{
+        font-size: 24px;
+        margin: 0 0 30px;
     }
 }
 
-.paginador_nota{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-    margin: 30px 0;
-    a{
-        color: var(--txt_cta_lightblue);
-        font-weight: 700;
-        display: flex;
-        gap: 10px;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    a:last-child{
-        grid-column: 2 / 3;
-        justify-self: flex-end;
-    }
+.s_header_vc{
+    background-color: #F4F4F4;
 }
 
-.social_share{
-    div{
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        a{
-            background-color: var(--color_pri);
-            color: var(--txt_cta_light);
-            border-radius: 100px;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+
+/* ESTILOS INTERNA FARMACIA OFTALMOLOGICA */
+
+
+.s_header_farmacia{
+	background: url('../images/diseno/21-farmacia/img_header.jpg') no-repeat center;
+	background-size: cover;
+
 }
+
+.c_header_farmacia{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	align-items: center;
+	.tit_farmacia{
+		h1{
+			text-align: left;
+			max-width: 450px;
+		}
+		.sub_txt{
+			font-size: 24px;
+			max-width: 420px;
+		}
+	}
+	picture{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		border-radius: 8px;
+		overflow: hidden;
+		transform: translateY(40px);
+		box-shadow: 0px 16px 16px -11px rgba(0, 0, 0, 0.35);
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.s_content_farmacia{
+	.txt_desc{
+		text-align: center;
+		width: 100%;
+		max-width: 750px;
+		margin: 100px auto 0;
+	}
+	.s_mision_vision{
+		margin-top: 40px;
+	}
+}
+
+.s_info_farmacia{
+	text-align: center;
+	.c_info_farmacia{
+		border-top: 1px solid #DADADA;
+		border-bottom: 1px solid #DADADA;
+		padding: 60px 0;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+
+	}
+}
+
+.items_contacto_farm{
+	a{
+		color: var(--color_pri);
+		b{
+			color: #3D3D3D;
+		}
+	}
+}
+
+.s_mision_vision{
+	.desc_mision_vision{
+		position: relative;
+		padding: 0 40px;
+		box-sizing: border-box;
+		border: 0;
+		margin: 60px 0;
+		.swiper-slide{
+			flex-direction: column;
+			gap: 20px;
+			h4{
+				margin: 0;
+				font-size: 18px;
+				font-weight: 400;
+				color: var(--txt_cta_lightblue);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ************
 RESPONSIVE DESIGN
@@ -4754,9 +4884,9 @@ RESPONSIVE DESIGN
 	.tit_section_blog::after {
 		width: 70%;
 	}
-    .row_nota{
-        gap: 30px;
-    }
+	.row_nota {
+		gap: 30px;
+	}
 }
 @media screen and (max-width: 768px) {
 	.tit_section {
@@ -5212,10 +5342,13 @@ RESPONSIVE DESIGN
 	.tit_section_blog::before {
 		display: none;
 	}
-    .row_nota{
-        grid-template-columns: 1fr;
-        gap: 80px;
-    }
+	.row_nota {
+		grid-template-columns: 1fr;
+		gap: 80px;
+	}
+	.c_header_farmacia{
+		grid-template-columns: 1fr;
+	}
 }
 @media screen and (max-width: 480px) {
 	header .header_nav {
@@ -5437,6 +5570,16 @@ RESPONSIVE DESIGN
 	}
 	.c_filtro {
 		gap: 10px;
+	}
+	.c_mision_vision ul li a{
+		font-size: 14px;
+		min-height: 54px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.s_mision_vision .desc_mision_vision{
+		padding: 0 20px;
 	}
 }
 @media screen and (max-width: 390px) {

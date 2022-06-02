@@ -2530,6 +2530,10 @@ button[type=submit] {
   overflow: hidden;
   position: relative;
 }
+.js-modal-btn picture {
+  display: inline-block;
+  cursor: pointer;
+}
 .js-modal-btn img {
   width: 100%;
   height: 100%;
@@ -2714,6 +2718,7 @@ button[type=submit] {
   width: 100%;
   display: flex;
   position: relative;
+  justify-content: center;
 }
 
 .pest_top {
@@ -2729,6 +2734,7 @@ button[type=submit] {
   transition: all 0.3s;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .pest_top:hover {
   background: #fff;
@@ -4542,7 +4548,7 @@ summary {
 .data_q_nota h4 {
   font-size: 16px;
   margin: 0 0 10px;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 .data_q_nota .calificacion {
   justify-self: flex-end;
@@ -4553,7 +4559,7 @@ summary {
   gap: 4px;
 }
 .data_q_nota .calificacion span {
-  color: #C4C4C4;
+  color: #c4c4c4;
   cursor: pointer;
 }
 .data_q_nota .calificacion .checked {
@@ -4595,6 +4601,107 @@ summary {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ESTILOS INTERNA VISION CARE */
+.s_contenido_r {
+  padding: 50px 0;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+}
+.s_contenido_r .tit_section {
+  font-size: 24px;
+  margin: 0 0 30px;
+}
+
+.s_header_vc {
+  background-color: #F4F4F4;
+}
+
+/* ESTILOS INTERNA FARMACIA OFTALMOLOGICA */
+.s_header_farmacia {
+  background: url("../images/diseno/21-farmacia/img_header.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.c_header_farmacia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.c_header_farmacia .tit_farmacia h1 {
+  text-align: left;
+  max-width: 450px;
+}
+.c_header_farmacia .tit_farmacia .sub_txt {
+  font-size: 24px;
+  max-width: 420px;
+}
+.c_header_farmacia picture {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  transform: translateY(40px);
+  box-shadow: 0px 16px 16px -11px rgba(0, 0, 0, 0.35);
+}
+.c_header_farmacia picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.s_content_farmacia .txt_desc {
+  text-align: center;
+  width: 100%;
+  max-width: 750px;
+  margin: 100px auto 0;
+}
+.s_content_farmacia .s_mision_vision {
+  margin-top: 40px;
+}
+
+.s_info_farmacia {
+  text-align: center;
+}
+.s_info_farmacia .c_info_farmacia {
+  border-top: 1px solid #DADADA;
+  border-bottom: 1px solid #DADADA;
+  padding: 60px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.items_contacto_farm a {
+  color: var(--color_pri);
+}
+.items_contacto_farm a b {
+  color: #3D3D3D;
+}
+
+.s_mision_vision .desc_mision_vision {
+  position: relative;
+  padding: 0 40px;
+  box-sizing: border-box;
+  border: 0;
+  margin: 60px 0;
+}
+.s_mision_vision .desc_mision_vision .swiper-slide {
+  flex-direction: column;
+  gap: 20px;
+}
+.s_mision_vision .desc_mision_vision .swiper-slide h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--txt_cta_lightblue);
 }
 
 /* ************
@@ -5427,6 +5534,10 @@ header .idiomas {
     grid-template-columns: 1fr;
     gap: 80px;
   }
+
+  .c_header_farmacia {
+    grid-template-columns: 1fr;
+  }
 }
 @media screen and (max-width: 480px) {
   header .header_nav {
@@ -5705,6 +5816,18 @@ header .idiomas {
 
   .c_filtro {
     gap: 10px;
+  }
+
+  .c_mision_vision ul li a {
+    font-size: 14px;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .s_mision_vision .desc_mision_vision {
+    padding: 0 20px;
   }
 }
 @media screen and (max-width: 390px) {

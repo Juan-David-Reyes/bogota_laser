@@ -184,6 +184,34 @@ $(document).ready(function(){
               }
         });
     }
+    
+    function sliderFarmacia(){
+        let swiper = new Swiper(".desc_mision_vision .sliderFarmacia", {
+            slidesPerView:3,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".desc_mision_vision .swiper-button-next",
+                prevEl: ".desc_mision_vision .swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20
+                },
+                // when window width is >= 480px
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                // when window width is >= 640px
+                1050: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                }
+              }
+        });
+    }
 
     function sliderBlogRecomendadas(){
         let swiper = new Swiper(".grand_con_slider .swiperNotasRecomendadas", {
@@ -518,6 +546,7 @@ $(document).ready(function(){
     dropdownMenu();
     searchBtn();
 
+    sliderFarmacia();
     sliderBlogRecomendadas();
     defectosVisualesMenu();
     sliderHomeHero();
