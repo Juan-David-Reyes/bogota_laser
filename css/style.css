@@ -4291,6 +4291,7 @@ summary {
   text-align: right;
   padding-bottom: 0;
   font-size: 16px;
+  align-items: flex-end;
 }
 .c_notas_blog .desc_card_nota {
   padding: 10px 20px;
@@ -5178,7 +5179,7 @@ RESPONSIVE DESIGN
     max-height: 220px;
   }
 
-  .c_filtro::after, .tit_section_blog::after, .c_filtro::before {
+  .c_filtro::after, .tit_section_blog::after, .c_filtro::before, .tit_section_blog::before {
     display: none;
   }
 }
