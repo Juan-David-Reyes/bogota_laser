@@ -185,6 +185,34 @@ $(document).ready(function(){
         });
     }
 
+    function sliderBlogRecomendadas(){
+        let swiper = new Swiper(".grand_con_slider .swiperNotasRecomendadas", {
+            slidesPerView:1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".grand_con_slider .swiper-button-next",
+                prevEl: ".grand_con_slider .swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10
+                },
+                // when window width is >= 480px
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 10
+                },
+                // when window width is >= 640px
+                1050: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                }
+              }
+        });
+    }
+
     function sliderItems(){
         let swiper = new Swiper(".c_items_slider .swiperItems", {
             slidesPerView:1,
@@ -490,6 +518,7 @@ $(document).ready(function(){
     dropdownMenu();
     searchBtn();
 
+    sliderBlogRecomendadas();
     defectosVisualesMenu();
     sliderHomeHero();
     sliderBlogSection();
