@@ -3829,7 +3829,7 @@ button[type="submit"] {
 
 .s_reserva {
 	background-color: #f4f4f4;
-	padding: 0 0 80px;
+	padding: 0 0 30px;
 	box-sizing: border-box;
 }
 
@@ -4857,6 +4857,25 @@ summary {
 		border-radius: 8px;
 	}
 }
+
+.c_otros_tratamientos{
+	.c_icon_equipos{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		align-items: center;
+		justify-items: center;
+		justify-content: center;
+		gap: 30px;
+		padding: 30px 0;
+		width: 100%;
+		a{
+			width: 20%;
+		}
+	}
+}
+
+
+
 
 
 
