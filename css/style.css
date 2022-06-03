@@ -266,6 +266,7 @@ h1 {
 .btn.lightblue {
   background-color: var(--bg_cta_lightblue);
   color: var(--txt_cta_light);
+  display: inline-block;
 }
 .btn.light {
   background-color: var(--bg_cta_light);
@@ -3223,7 +3224,7 @@ button[type=submit] {
 
 .item_info_procedimientos {
   display: grid;
-  grid-template-columns: 1.5fr 2fr;
+  grid-template-columns: 300px 2fr;
   gap: 30px;
   align-items: stretch;
   margin: 40px 0;
@@ -3232,13 +3233,17 @@ button[type=submit] {
   border-radius: 4px;
   overflow: hidden;
   display: inline-block;
-  max-height: 300px;
 }
 .item_info_procedimientos .subtit_proce {
   display: flex;
   align-items: center;
   gap: 10px;
   align-self: flex-start;
+  max-width: 390px;
+}
+.item_info_procedimientos .subtit_proce span {
+  font-size: 20px;
+  color: var(--color_pri);
 }
 .item_info_procedimientos .subtit_proce h4 {
   color: var(--txt_cta_lightblue);
@@ -3284,6 +3289,24 @@ button[type=submit] {
   display: inline-block;
   text-align: center;
   font-size: 15px;
+}
+.item_info_procedimientos .contenido_proced ul {
+  margin: 0;
+}
+.item_info_procedimientos .contenido_proced ul li {
+  list-style: none;
+  position: relative;
+  margin: 0 0 20px;
+}
+.item_info_procedimientos .contenido_proced ul li::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -26px;
+  background: url("../images/diseno/19-defectos-visuales/bullets.svg") no-repeat center;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
 }
 
 .s_it_trata {
@@ -4799,6 +4822,75 @@ summary {
   color: var(--txt_cta_lightblue);
 }
 
+/* ESTILOS INTERNA DEFECTOS VISUALES */
+.s_banner_tratamiento_fondo {
+  background: url("../images/diseno/19-defectos-visuales/bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+.s_banner_tratamiento_fondo h3 {
+  margin: 0 0 20px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.s_banner_tratamiento_fondo h3 span {
+  color: var(--color_pri);
+}
+.s_banner_tratamiento_fondo .cb_tratamiento_fondo {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+.s_banner_tratamiento_fondo .cont_buttons {
+  margin: 30px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.s_banner_tratamiento_fondo .cont_buttons a {
+  display: inline-block;
+}
+
+.bg_none {
+  background-color: transparent;
+}
+
+.bg_white {
+  background-color: #FFF;
+}
+
+.int_vc .cont_pest_top .pest_top {
+  background-color: transparent;
+  border-radius: 0;
+}
+.int_vc .cont_pest_top .pest_top:nth-child(1n+2) {
+  border-left: 1px solid #a7a7a7;
+}
+
+.mt_10 {
+  margin: 10px 0 0;
+}
+
+.mt_20 {
+  margin: 20px 0 0;
+}
+
+.cont_doble_picture {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cont_doble_picture img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
 /* ************
 RESPONSIVE DESIGN
 ************ */
@@ -5082,6 +5174,18 @@ header .idiomas {
 
   .txt_header_vc {
     text-align: left;
+  }
+
+  .cont_doble_picture {
+    flex-direction: column;
+  }
+  .cont_doble_picture img {
+    width: 100%;
+    height: initial;
+  }
+
+  .item_info_procedimientos {
+    grid-template-columns: 1fr;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5666,6 +5770,10 @@ header .idiomas {
 
   .subcontain_CV {
     grid-template-columns: 1fr;
+  }
+
+  .s_banner_tratamiento_fondo .cont_buttons {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 480px) {
