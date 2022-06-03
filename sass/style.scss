@@ -4559,6 +4559,103 @@ summary {
     background-color: #F4F4F4;
 }
 
+.cont_header_vc{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 60px;
+	.containerSliderVC{
+		position: relative;
+		padding: 0 20px;
+		box-sizing: border-box;
+		max-width: 500px;
+	}
+	.swiper{
+		border-radius: 6px;
+	}
+	.swiper-button-next, .swiper-button-prev{
+		top: 50%;
+	}
+}
+
+.txt_header_vc{
+	h4{
+		font-size: 20px;
+		text-transform: uppercase;
+		color: var(--color_pri);
+	}
+	p{
+		padding: 0 0 20px;
+	}
+}
+
+.s_container_tabs_VC{
+	background: #FFF;
+	.sub_container_header{
+		display: grid;
+		grid-template-columns: 1fr 1.4fr;
+		align-items: center;
+		justify-content: center;
+		gap: 40px;
+	}
+	picture{
+		display: inline-block;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.content_subscontainer{
+	padding: 40px 0;
+	box-sizing: border-box;
+	.tit_section{
+		font-size: 24px;
+	}
+}
+
+
+.mod_VC{
+	background: transparent;
+	position: relative;
+	z-index: 1;
+	.pest_top{
+		border: 1px solid transparent;
+
+	}
+	.pest_top.active{
+		border: 1px solid #CCCCCC;
+		border-bottom: 1px solid #FFF;
+	}
+}
+
+.subcontain_CV{
+	padding: 50px;
+	box-sizing: border-box;
+	border: 1px solid #CCCCCC;
+	transform: translateY(-1px);
+	border-radius: 8px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	align-items: center;
+	picture{
+		display: inline-block;
+		border-radius: 8px;
+		overflow: hidden;
+		max-height: 254px;
+		height: 100%;
+		width: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
 
 /* ESTILOS INTERNA FARMACIA OFTALMOLOGICA */
 
@@ -4886,6 +4983,20 @@ RESPONSIVE DESIGN
 	}
 	.row_nota {
 		gap: 30px;
+	}
+	.cont_header_vc{
+		grid-template-columns: 1fr;
+	}
+	.cont_header_vc .containerSliderVC{
+		max-width: 670px;
+		width: 100%;
+		margin: auto;
+	}
+	.txt_header_vc{
+		text-align: center;
+	}
+	.txt_header_vc{
+		text-align: left;
 	}
 }
 @media screen and (max-width: 768px) {
@@ -5353,6 +5464,15 @@ RESPONSIVE DESIGN
 	.c_header_farmacia{
 		grid-template-columns: 1fr;
 	}
+	.cont_header_vc .containerSliderVC{
+		max-width: 400px;
+	}
+	.s_container_tabs_VC .sub_container_header{
+		grid-template-columns: 1fr;
+	}
+	.subcontain_CV{
+		grid-template-columns: 1fr;
+	}
 }
 @media screen and (max-width: 480px) {
 	header .header_nav {
@@ -5584,6 +5704,12 @@ RESPONSIVE DESIGN
 	}
 	.s_mision_vision .desc_mision_vision{
 		padding: 0 20px;
+	}
+	.cont_header_vc .containerSliderVC{
+		max-width: 340px;
+	}
+	.subcontain_CV{
+		padding: 20px;
 	}
 }
 @media screen and (max-width: 390px) {

@@ -536,6 +536,29 @@ $(document).ready(function(){
 
     }
 
+
+
+    /* ********* */
+
+
+    function sliderVC(){
+        let swiper = new Swiper(".swiperVC", {
+            slidesPerView:1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".containerSliderVC .swiper-button-next",
+                prevEl: ".containerSliderVC .swiper-button-prev",
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            
+        });
+    }
+
+    
+
    
 
 
@@ -546,6 +569,7 @@ $(document).ready(function(){
     dropdownMenu();
     searchBtn();
 
+    sliderVC();
     sliderFarmacia();
     sliderBlogRecomendadas();
     defectosVisualesMenu();
@@ -563,5 +587,6 @@ $(document).ready(function(){
     collapseFooter();
     ajusteFooter();
 
+    visionCare();
     derechosDeberes();
 });
